@@ -5,7 +5,7 @@
         <title>Escolha</title>
     </head>
     <body>
-        <form>
+        <form action="Escolha-de-mascote" method="POST">
             <p>Escolha de mascote. Qual você prefere?</p>
             <div>
                 <input type="radio" id="Raposa" name="mascote" value="Raposa" />
@@ -30,7 +30,15 @@
                 <input type="radio" id="Dragão" name="mascote" value="Dragão" />
                 <label for="Dragão">Dragão</label>
             </div>
+            <div>
+                <input type="radio" id="sugestao" name="mascote" value="sugestao" />
+                <label for="sugestao">sugestão: </label>
+                <textarea name="sugestao" id="sugestao" cols="30" rows="1">Entre com uma sugestão</textarea>
+            </div>
+            <div class="button">
+                <button type="reset">Reset</button>
+                <button type="submit">Enviar escolha</button>
+            </div>
         </form>
-
     </body>
 </html>
