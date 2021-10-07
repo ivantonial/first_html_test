@@ -5,23 +5,23 @@
         <title>Tilha Web: Módulo 02 - Parte 05 - Ex.03</title>
     </head>
     <body>
-        <form>
+        <form method="POST">
             <h1>Trilha Web: Módulo 02 - Parte 05 - Ex.03!</h1>
-            <fieldset>
-                <h2>Questão 1:</h2>
-                <p>Entre com seu <b>nome completo</b>?</p>
-                <input type="text" id="hiddentag" name="hiddentag" size="40" />
+            <fieldset id="questao1">
+                <legend><font size="5">Questão 1</font></legend>
+                <p>Entre com seu <b>nome completo</b>.</p>
+                <p><label for="thiddentag">Nome:</label> <input type="text" id="thiddentag" name="chiddentag" size="70" maxlength="70" placeholder="Nome Completo"/></p>
             </fieldset>
-            <fieldset>
-                <h2>Questão 2:</h2>
+            <fieldset id="questao2">
+                <legend><font size="5">Questão 2</font></legend>
                 <p>Qual é o significado de <em>'html</em>?</p>
                 <input type="radio" name="html" id="HyperText-Markup-Language" />
                 <label for="HyperText-Markup-Language">HyperText Markup Language</label> <br />
                 <input type="radio" name="html" id="wronghtml1" />
                 <label for="wronghtml1">HyperText Margin Language</label>
             </fieldset>
-            <fieldset>
-                <h2>Questão 3:</h2>
+            <fieldset id="questao3">
+                <legend><font size="5">Questão 3</font></legend>
                 <p>Qual é o <strong>primeiro nome</strong> da conhecida pessoa, que foi homenageada ao seu sobrenome, <strong>Lovelace</strong>, dar nome à turma?</p>
                 <input type="radio" name="lovelace" id="Ada" />
                 <label for="Ada">Ada</label><br />
@@ -30,8 +30,8 @@
                 <input type="radio" name="lovelace" id="Joana" />
                 <label for="Joana">Joana</label>
             </fieldset>
-            <fieldset>
-                <h2>Questão 4:</h2>
+            <fieldset id="questao4">
+                <legend><font size="5">Questão 4</font></legend>
                 <p>Selecione as opções de <em>tags</em> já utilizadas no curso:</p>
                 <input type="checkbox" name="tags" id="div" value="div" />
                 <label for="div"><i>'div'</i> |</label>
@@ -52,14 +52,14 @@
                 <input type="checkbox" name="tags" id="body" value="body" />
                 <label for="body"><i>'body'</i> |</label>
             </fieldset>
-            <fieldset>
-                <h2>Questão 5:</h2>
+            <fieldset id="questao5">
+                <legend><font size="5">Questão 5</font></legend>
                 <p>A quantos meses você está no projeto AlphaEdTech?</p>
-                <input type="range" name="tempo" id="tempo" value="0" min="0" max="18" oninput="result.value = tempo.value" />
-                <input type="number" name="result" id="result" value="0" min="0" max="18" oninput="tempo.value=result.value" />
+                <p>0<input type="range" name="rtempo" id="ctempo" value="0" min="0" max="18" oninput="rresult.value = rtempo.value" />18</p>
+                <p><input type="number" name="rresult" id="cresult" value="0" min="0" max="18" oninput="rtempo.value=rresult.value" /></p>
             </fieldset>
-            <fieldset>
-                <h2>Questão 6:</h2>
+            <fieldset id="questao6">
+                <legend><font size="5">Questão 6</font></legend>
                 <p>Responda sabendo que as seguintes afirmações, relativas a um grupo de 9 amigos, são verdadeiras:</p>
                 <ul>
                     <li>A idade de Marcos é a média aritmética das idades desse grupo.</li>
@@ -78,9 +78,10 @@
                 <input type="radio" name="logica-condicional" id="resp4" />
                 <label for="resp4">Marcos tem idade igual à metade da soma das idades do mais velho e do mais novo.</label>
             </fieldset>
-            <div class="button"></div>
+            <div class="button">
             <button type="reset">Reset</button>
             <button type="submit">Submit</button>
+            </div>
         </form>
     </body>
 </html>

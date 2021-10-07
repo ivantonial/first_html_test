@@ -6,24 +6,21 @@
     </head>
     <body>
         <h1>Exercício 1:</h1>
-        <form>
+        <form method="POSTS">
             <fieldset>
-                <h2>text:</h2>
-                login: <br />
-                <input type="text" /> <br /> <br />
+                <legend><font size="+2">Text</font></legend>
+                <p><label for="clogin">Login: </label><input type="text" id="clogin" size="30" maxlength="30" placeholder="Máximo 30 caracteres" /></p>
             </fieldset>
             <fieldset>
-                <h2>password:</h2>
-                Password: <br />
-                <input type="password" /> <br /> <br />
+                <legend><font size="+2">Password</font></legend>
+                <p><label for="csenha">Password:</label> <input type="password" id=csenha size="10" maxlength="10" placeholder="10 caracteres" /></p>
             </fieldset>
             <fieldset>
-                <h2>date:</h2>
-                Data: <br />
-                <input type="date" /> <br /> <br />
+                <legend><font size="+2">Date</font></legend>
+                <p><label for="cdata">Data:</label> <input type="date" id="cdata" /></p>
             </fieldset>
             <fieldset>
-                <h2>radio:</h2>
+                <legend><font size="+2">Radio</font></legend>
                 <p>Escolha de mascote. Qual você prefere?</p>
                 <input type="radio" id="Raposa" name="mascote" value="Raposa" />
                 <label for="Raposa">Raposa</label> <br />
@@ -39,7 +36,7 @@
                 <label for="sugestao"><sup>Sugestão: </sup><textarea name="sugestao" id="sugestao" cols="30" rows="1">Entre com uma sugestão</textarea></label>
             </fieldset>
             <fieldset>
-                <h2>checkbox:</h2>
+                <legend><font size="+2">Checkbox</font></legend>
                 checkbox: <br />
                 <input type="checkbox" id="opcao1" value="opcao1" /> 
                 <label for="opcao1">Opção 1</label> <br />
@@ -49,14 +46,14 @@
                 <label for="opcao3">Opção 3</label> <br /> <br />
             </fieldset>
             <fieldset>
-                <h2>range:</h2>
+                <legend><font size="+2">Range</font></legend>
                 <input type="range" id="send" id="send" value="500" min="0" max="1000" oninput="result.value = send.value"> <br />
                 <input type="number" id="result" id=result value="500" min="0" max="1000" oninput="send.value = result.value">
             </fieldset>
             <div class="button">
-                <h2>botão reset e submit:</h2>
+                <h2>botões Reset e Submit</h2>
                 <button type="reset">Reset</button>
-                <button type="submit">Enviar escolha</button>
+                <button type="submit">Enviar</button>
             </div>
         </form>
     </body>
