@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>Formulários</title>
+    </head>
+    <body>
+        <h1>Exercício 1:</h1>
+        <form>
+            <fieldset>
+                <h2>text:</h2>
+                login: <br />
+                <input type="text" /> <br /> <br />
+            </fieldset>
+            <fieldset>
+                <h2>password:</h2>
+                Password: <br />
+                <input type="password" /> <br /> <br />
+            </fieldset>
+            <fieldset>
+                <h2>date:</h2>
+                Data: <br />
+                <input type="date" /> <br /> <br />
+            </fieldset>
+            <fieldset>
+                <h2>radio:</h2>
+                <p>Escolha de mascote. Qual você prefere?</p>
+                <input type="radio" id="Raposa" name="mascote" value="Raposa" />
+                <label for="Raposa">Raposa</label> <br />
+                <input type="radio" id="Furao" name="mascote" value="Furão" />
+                <label for="Furao">Furão</label> <br />
+                <input type="radio" id="Urubu" name="mascote" value="Urubu" />
+                <label for="Urubu">Urubu</label> <br />
+                <input type="radio" id="Tie-sangue" name="mascote" value="Tiê-sangue" />
+                <label for="Tie-sangue">Tiê-sangue</label> <br />
+                <input type="radio" id="Dragao" name="mascote" value="Dragão" />
+                <label for="Dragao">Dragão</label> <br />
+                <input type="radio" id="sugestao" name="mascote" value="sugestao" />
+                <label for="sugestao"><sup>Sugestão: </sup><textarea name="sugestao" id="sugestao" cols="30" rows="1">Entre com uma sugestão</textarea></label>
+            </fieldset>
+            <fieldset>
+                <h2>checkbox:</h2>
+                checkbox: <br />
+                <input type="checkbox" id="opcao1" value="opcao1" /> 
+                <label for="opcao1">Opção 1</label> <br />
+                <input type="checkbox" id="opcao2" value="opcao2" />
+                <label for="opcao2">Opção 2</label> <br />
+                <input type="checkbox" id="opcao3" value="opcao3" />
+                <label for="opcao3">Opção 3</label> <br /> <br />
+            </fieldset>
+            <fieldset>
+                <h2>range:</h2>
+                <input type="range" id="send" id="send" value="500" min="0" max="1000" oninput="result.value = send.value"> <br />
+                <input type="number" id="result" id=result value="500" min="0" max="1000" oninput="send.value = result.value">
+            </fieldset>
+            <div class="button">
+                <h2>botão reset e submit:</h2>
+                <button type="reset">Reset</button>
+                <button type="submit">Enviar escolha</button>
+            </div>
+        </form>
+    </body>
+</html>

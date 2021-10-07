@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>Tilha Web: Módulo 02 - Parte 05 - Ex.03</title>
+    </head>
+    <body>
+        <form>
+            <h1>Trilha Web: Módulo 02 - Parte 05 - Ex.03!</h1>
+            <fieldset>
+                <h2>Questão 1:</h2>
+                <p>Entre com seu <b>nome completo</b>?</p>
+                <input type="text" id="hiddentag" name="hiddentag" size="40" />
+            </fieldset>
+            <fieldset>
+                <h2>Questão 2:</h2>
+                <p>Qual é o significado de <em>'html</em>?</p>
+                <input type="radio" name="html" id="HyperText-Markup-Language" />
+                <label for="HyperText-Markup-Language">HyperText Markup Language</label> <br />
+                <input type="radio" name="html" id="wronghtml1" />
+                <label for="wronghtml1">HyperText Margin Language</label>
+            </fieldset>
+            <fieldset>
+                <h2>Questão 3:</h2>
+                <p>Qual é o <strong>primeiro nome</strong> da conhecida pessoa, que foi homenageada ao seu sobrenome, <strong>Lovelace</strong>, dar nome à turma?</p>
+                <input type="radio" name="lovelace" id="Ada" />
+                <label for="Ada">Ada</label><br />
+                <input type="radio" name="lovelace" id="Hamilton" />
+                <label for="Hamilton">Hamilton</label><br />
+                <input type="radio" name="lovelace" id="Joana" />
+                <label for="Joana">Joana</label>
+            </fieldset>
+            <fieldset>
+                <h2>Questão 4:</h2>
+                <p>Selecione as opções de <em>tags</em> já utilizadas no curso:</p>
+                <input type="checkbox" name="tags" id="div" value="div" />
+                <label for="div"><i>'div'</i> |</label>
+                <input type="checkbox" name="tags" id="h1" value="h1" />
+                <label for="h1"><i>'h1'</i> |</label>
+                <input type="checkbox" name="tags" id="h2" value="h2" />
+                <label for="h2"><i>'h2'</i> |</label>
+                <input type="checkbox" name="tags" id="b" value="b" />
+                <label for="b"><i>'b'</i> |</label>
+                <input type="checkbox" name="tags" id="br" value="br" />
+                <label for="br"><i>'br'</i> |</label>
+                <input type="checkbox" name="tags" id="hidden" value="hidden" />
+                <label for="hidden"><i>'hidden'</i> |</label>
+                <input type="checkbox" name="tags" id="title" value="title" />
+                <label for="tittle"><i>'title'</i> |</label>
+                <input type="checkbox" name="tags" id="html" value="html" />
+                <label for="html"><i>'html'</i> |</label>
+                <input type="checkbox" name="tags" id="body" value="body" />
+                <label for="body"><i>'body'</i> |</label>
+            </fieldset>
+            <fieldset>
+                <h2>Questão 5:</h2>
+                <p>A quantos meses você está no projeto AlphaEdTech?</p>
+                <input type="range" name="tempo" id="tempo" value="0" min="0" max="18" oninput="result.value = tempo.value" />
+                <input type="number" name="result" id="result" value="0" min="0" max="18" oninput="tempo.value=result.value" />
+            </fieldset>
+            <fieldset>
+                <h2>Questão 6:</h2>
+                <p>Responda sabendo que as seguintes afirmações, relativas a um grupo de 9 amigos, são verdadeiras:</p>
+                <ul>
+                    <li>A idade de Marcos é a média aritmética das idades desse grupo.</li>
+                    <li>Pedro possui exatamente 4 amigos mais novos.</li>
+                    <li>Joaquim e José são os únicos amigos com a mesma idade.</li>
+                    <li>A soma das idades de todos é um número divisível por 9.</li>
+                    <li>O amigo de maior idade tem 4 anos a mais que o segundo amigo mais velho.</li>
+                </ul>
+                <p>É correto afirmar que:</p>
+                <input type="radio" name="logica-condicional" id="resp1" />
+                <label for="resp1">Marcos é mais velho que Pedro.</label><br />
+                <input type="radio" name="logica-condicional" id="resp2" />
+                <label for="resp2">Pedro é mais velho que Joaquim e José.</label><br />
+                <input type="radio" name="logica-condicional" id="resp3" />
+                <label for="resp3">Marcos é mais novo que Joaquim e José.</label><br />
+                <input type="radio" name="logica-condicional" id="resp4" />
+                <label for="resp4">Marcos tem idade igual à metade da soma das idades do mais velho e do mais novo.</label>
+            </fieldset>
+            <div class="button"></div>
+            <button type="reset">Reset</button>
+            <button type="submit">Submit</button>
+        </form>
+    </body>
+</html>
+
