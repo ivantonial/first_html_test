@@ -92,161 +92,151 @@
             As empresas AMD e Harris Corporation, conseguiram romper esse patamar depois disso, conseguindo chegar a 25 MHz.
         </p>
         <h3 style="color:#6163e2; border: 1px solid #6163e2">Lista de processadores x86</h3>
-        <table style="border: 1px solid aquamarine; border-collapse: collapse; background-color: azure;">
-            <tr style="border: 1px solid aquamarine; border-collapse: collapse;">
-                <th style="border: 1px solid aquamarine; border-collapse: collapse;">Geração</th>
-                <th style="border: 1px solid aquamarine; border-collapse: collapse;">Data de introdução</th>
-                <th style="border: 1px solid aquamarine; border-collapse: collapse;">Marcas e modelos de CPU</th>
-                <th style="border: 1px solid aquamarine; border-collapse: collapse;">Linear/Espaço de endereço Físico</th>
-                <th style="border: 1px solid aquamarine; border-collapse: collapse;">Novos recursos</th>
+        <table style="width: 100%; height: 250px; text-align: center;">
+			<tr heign="2%";
+				style="background-color:#FFAD28;">
+				<th width="5%">Geração</th>
+				<th width="5%">Introduzido Inicialmente em</th>
+				<th width="30%">Marcas e Modelos de CPUs</th>
+				<th width="30%">Linear/Espaço de Endereço Físico</th>
+				<th width="30%">Novos Recursos</th>
+			</tr>
+			<tr height="auto">
+				<td style="background-color: #FFAD28;">1</td>
+				<td style="background-color: #FFC15D;">1978</td>
+				<td style="background-color: #FFC15D;">Intel 8086<br />Intel 8088</td>
+				<td rowspan="2"
+					style="background-color: #FFC15D;"><b>16-bit</b>/20-bit (segmentados)</td>
+				<td style="background-color: #FFC15D;">Primeiros processadores x86</td>
+			</tr>
+			<tr height="auto">
+				<td rowspan="2"
+					style="background-color: #FFAD28;">2</td>
+				<td rowspan="2" style="background-color: #FFC15D;">1982</td>
+				<td style="background-color: #FFC15D;">Intel 80186<br />Intel 80188<br />NEC V20/V30</td>
+				<td style="background-color: #FFC15D;">Hardware para cálculos de endereços rápidos</td>
+			</tr>
+			<tr height="auto">
+                <td style="background-color: #FFC15D;">Intel 80286</td>
+                <td style="background-color: #FFC15D;">16-bit (30-bit virtual)/24-bit (segmentados)</td>
+                <td style="background-color: #FFC15D;">MMU, para o modo protegido e um maior espaço de endereço</td>
+			</tr>
+            <tr height="auto">
+				<td style="background-color: #FFAD28;">3</td>
+                <td style="background-color: #FFC15D;">1985</td>
+                <td style="background-color: #FFC15D;">Intel 80386<br />AMD Am386</td>
+                <td rowspan="4"
+                style="background-color: #FFC15D;">32-bit (46-bit virtual)/Conjunto de instruções com 32-bit, MMU com paginação</td>
+                <td style="background-color: #FFC15D;"></td>
+			</tr>
+			<tr height="auto">
+				<td style="background-color: #FFAD28;">4</td>
+                <td style="background-color: #FFC15D;">1989</td>
+                <td style="background-color: #FFC15D;">Intel 486 (SX/DS/DX2)<br />AMD Am486 (SX/SX2/DX/DX2/DX4)<br />AMD 5x86 (486 DX5)<br />
+                    Cyrix 486 (SX/DX/DX2/DX4)<br />Cyrix 5x86 (486DX3 e DX5)</td>
+                <td style="background-color: #FFC15D;">RISC FPU pipelining, cache integrada, on-chip</td>
+			</tr>
+			<tr height="auto">
+				<td rowspan="2"
+                    style="background-color: #FFAD28;">5</td>
+                <td style="background-color: #FFC15D;">1993</td>
+                <td style="background-color: #FFC15D;">Intel Pentium</td>
+                <td style="background-color: #FFC15D;">Superscalar, 64-bit databus, faster FPU, MMX</td>
+			</tr>
+            <tr height="auto">
+				<td style="background-color: #FFC15D;">1994</td>
+                <td style="background-color: #FFC15D;">NexGen Nx586</td>
+                <td style="background-color: #FFC15D;">Inicialmente não possuia FPU, foi adicionada em modelos posteriores</td>
+			</tr>
+			<tr height="auto">
+				<td style="background-color: #FFAD28;">6</td>
+                <td style="background-color: #FFC15D;">1995</td>
+                <td style="background-color: #FFC15D;">Pentium Pro</td>
+                <td style="background-color: #FFC15D;"></td>
+                <td style="background-color: #FFC15D;">Execução Expeculativa, foi substituído pelo Pentium Xeon</td>
+			</tr>
+			<tr height="auto">
+				<td style="background-color: #FFAD28;">5</td>
+                <td style="background-color: #FFC15D;">1996</td>
+                <td style="background-color: #FFC15D;">AMD K5<br />Cyrix 6x86<br />Rise mP6</td>
+                <td rowspan="5"
+                style="background-color: #FFC15D;">como acima/36-bit Físico (PAE)</td>
+                <td style="background-color: #FFC15D;">translação μ-op, PAE Pentium Pro, integrado com cache L2 (Pentium Pro), instrução de movimentação condicional</td>
+			</tr>
+			<tr height="auto">
+				<td style="background-color: #FFAD28;">6</td>
+                <td style="background-color: #FFC15D;">1997</td>
+                <td style="background-color: #FFC15D;">AMD K6/-2/3<br />Pentium II/III<br />Centaur-C6</td>
+                <td style="background-color: #FFC15D;">Cache L3 suportado, 3DNow, SSE</td>
+			</tr>
+			<tr height="auto">
+				<td rowspan="2" 
+                style="background-color: #FFAD28;">7</td>
+                <td style="background-color: #FFC15D;">1999</td>
+                <td style="background-color: #FFC15D;">Athlon<br />Athlon XP</td>
+                <td style="background-color: #FFC15D;">Superscalar FPU, design wide (até três instruções por ciclo de clock)</td>
+			</tr>
+            <tr height="auto">
+				<td style="background-color: #FFC15D;">2000</td>
+                <td style="background-color: #FFC15D;">Pentium 4</td>
+                <td style="background-color: #FFC15D;">Alta conduta, alta frequencia, SSE2, hyper threading</td>
             </tr>
-            <tr>
-                <th style="border: 1px solid aquamarine; border-collapse: collapse;">1</th>
-                <th style="border: 1px solid aquamarine; border-collapse: collapse;">1978</th>
-                <th style="border: 1px solid aquamarine; border-collapse: collapse;">Intel 8086<br />Intel 8088</th>
-                <th style="border: 1px solid aquamarine; border-collapse: collapse;">16-bit/20bit (segmentados)</th>
-                <th style="border: 1px solid aquamarine; border-collapse: collapse;">Primeiros processadores x86</th>
-            </tr>
-            <tr>
-                <th style="border: 1px solid aquamarine; border-collapse: collapse;">2</th>
-                <th style="border: 1px solid aquamarine; border-collapse: collapse;">1982</th>
-                <th style="border: 1px solid aquamarine; border-collapse: collapse;">Intel 80186<br />Intel 80188<br />NEC V20/ V30</th>
-                <th style="border: 1px solid aquamarine; border-collapse: collapse;">16-bit/20bit (segmentados)</th>
-                <th style="border: 1px solid aquamarine; border-collapse: collapse;">Hardware para Cálculos de endereços rápidos</th>
-            </tr>
-            <tr>
-                <th style="border: 1px solid aquamarine; border-collapse: collapse;">2</th>
-                <th style="border: 1px solid aquamarine; border-collapse: collapse;">1982</th>
-                <th style="border: 1px solid aquamarine; border-collapse: collapse;">Intel 80286</th>
-                <th style="border: 1px solid aquamarine; border-collapse: collapse;">16-bit (30-bit virtual)/24-bit (segmentados)</th>
-                <th style="border: 1px solid aquamarine; border-collapse: collapse;">MMU, para o modo protegido e um maior espaço de endereço.</th>
-            </tr>
-            <tr>
-                <th style="border: 1px solid aquamarine; border-collapse: collapse;">3 (IA-32)</th>
-                <th style="border: 1px solid aquamarine; border-collapse: collapse;">1985</th>
-                <th style="border: 1px solid aquamarine; border-collapse: collapse;">Intel 80386<br />AMD Am386</th>
-                <th style="border: 1px solid aquamarine; border-collapse: collapse;">32-bit (46-bit virtual)/Conjunto de instruções com 32-bit<br />MMU com paginação.</th>
-                <th style="border: 1px solid aquamarine; border-collapse: collapse;"></th>
-            </tr>
-            <tr>
-                <th style="border: 1px solid aquamarine; border-collapse: collapse;">4</th>
-                <th style="border: 1px solid aquamarine; border-collapse: collapse;">1989</th>
-                <th style="border: 1px solid aquamarine; border-collapse: collapse;">Intel 486 (SX/DS/DX2)<br />AMD Am486 (SX/SX2/DX/DX2/DX4)<br />AMD 5x86 (486 DX5)<br />Ctrix 486 (SX/DX/DX2/DX4)<br />Cyrix 5x86 (486DX3 e DX5)</th>
-                <th style="border: 1px solid aquamarine; border-collapse: collapse;">32-bit (46-bit virtual)/Conjunto de instruções com 32-bit, MMU com paginação.</th>
-                <th style="border: 1px solid aquamarine; border-collapse: collapse;">RISC FPU pipelining, cache integrada, on-chip.</th>
-            </tr>
-            <tr>
-                <th style="border: 1px solid aquamarine; border-collapse: collapse;">5</th>
-                <th style="border: 1px solid aquamarine; border-collapse: collapse;">1993</th>
-                <th style="border: 1px solid aquamarine; border-collapse: collapse;">Intel Pentium</th>
-                <th style="border: 1px solid aquamarine; border-collapse: collapse;">32-bit (46-bit virtual)/Conjunto de instruções com 32-bit, MMU com paginação.</th>
-                <th style="border: 1px solid aquamarine; border-collapse: collapse;">Superscalar, 64-bit databus, faster FPU, MMX</th>
-            </tr>
-            <tr>
-                <th style="border: 1px solid aquamarine; border-collapse: collapse;">5</th>
-                <th style="border: 1px solid aquamarine; border-collapse: collapse;">1994</th>
-                <th style="border: 1px solid aquamarine; border-collapse: collapse;">NexGen Nx586</th>
-                <th style="border: 1px solid aquamarine; border-collapse: collapse;">32-bit (46-bit virtual)/Conjunto de instruções com 32-bit, MMU com paginação.</th>
-                <th style="border: 1px solid aquamarine; border-collapse: collapse;">Inicialmente não possuia FPU, foi adicionada em modelos posteriores</th>
-            </tr>
-            <tr>
-                <th style="border: 1px solid aquamarine; border-collapse: collapse;">6</th>
-                <th style="border: 1px solid aquamarine; border-collapse: collapse;">1995</th>
-                <th style="border: 1px solid aquamarine; border-collapse: collapse;">Pentium Pro</th>
-                <th style="border: 1px solid aquamarine; border-collapse: collapse;"></th>
-                <th style="border: 1px solid aquamarine; border-collapse: collapse;">Execução Expeculativa, foi substituido pelo Pentium Xeon.</th>
-            </tr>
-            <tr>
-                <th style="border: 1px solid aquamarine; border-collapse: collapse;">5</th>
-                <th style="border: 1px solid aquamarine; border-collapse: collapse;">1996</th>
-                <th style="border: 1px solid aquamarine; border-collapse: collapse;">AMD K5<br />Cyrix 6x86<br />Rise mP6</th>
-                <th style="border: 1px solid aquamarine; border-collapse: collapse;">36-bit Físico (PAE)</th>
-                <th style="border: 1px solid aquamarine; border-collapse: collapse;">Translação μ-op, PAE Pentium Pro, integrado com cache L2 (Pentium Pro), instrução de movimentação condicional.</th>
-            </tr>
-            <tr>
-                <th style="border: 1px solid aquamarine; border-collapse: collapse;">6</th>
-                <th style="border: 1px solid aquamarine; border-collapse: collapse;">1997</th>
-                <th style="border: 1px solid aquamarine; border-collapse: collapse;">AMD K6/-2/3<br />Pentium II/III<br />Centaur-C6</th>
-                <th style="border: 1px solid aquamarine; border-collapse: collapse;">36-bit Físico (PAE)</th>
-                <th style="border: 1px solid aquamarine; border-collapse: collapse;">cache L3 suportando, 3DNow, SSE.</th>
-            </tr>
-            <tr>
-                <th style="border: 1px solid aquamarine; border-collapse: collapse;">7</th>
-                <th style="border: 1px solid aquamarine; border-collapse: collapse;">1999</th>
-                <th style="border: 1px solid aquamarine; border-collapse: collapse;">Athlon<br />Athlon XP</th>
-                <th style="border: 1px solid aquamarine; border-collapse: collapse;">36-bit Físico (PAE)</th>
-                <th style="border: 1px solid aquamarine; border-collapse: collapse;">superscalar FPU, design wide (até três instruções por ciclo de clock)</th>
-            </tr>
-            <tr>
-                <th style="border: 1px solid aquamarine; border-collapse: collapse;">7</th>
-                <th style="border: 1px solid aquamarine; border-collapse: collapse;">2000</th>
-                <th style="border: 1px solid aquamarine; border-collapse: collapse;">Pentium 4</th>
-                <th style="border: 1px solid aquamarine; border-collapse: collapse;">36-bit Físico (PAE)</th>
-                <th style="border: 1px solid aquamarine; border-collapse: collapse;">Alta conduta, alta frequencia, SSE2, hyper-threading.</th>
-            </tr>
-            <tr>
-                <th style="border: 1px solid aquamarine; border-collapse: collapse;">6-M/7-M</th>
-                <th style="border: 1px solid aquamarine; border-collapse: collapse;">2003</th>
-                <th style="border: 1px solid aquamarine; border-collapse: collapse;">Pentium M<br />VIA C7 (2005)<br />Intel Core (2006)</th>
-                <th style="border: 1px solid aquamarine; border-collapse: collapse;">36-bit Físico (PAE)</th>
-                <th style="border: 1px solid aquamarine; border-collapse: collapse;">Otimizados para baixo consumo.</th>
-            </tr>
-            <tr>
-                <th style="border: 1px solid aquamarine; border-collapse: collapse;">8</th>
-                <th style="border: 1px solid aquamarine; border-collapse: collapse;">2003</th>
-                <th style="border: 1px solid aquamarine; border-collapse: collapse;">Athlon 64<br />Opteron</th>
-                <th style="border: 1px solid aquamarine; border-collapse: collapse;">64-bit/40-bit Implementação física do primeiro processador AMD</th>
-                <th style="border: 1px solid aquamarine; border-collapse: collapse;">Conjunto de instruções x86-64, controlador de memória on-die, hypertransport.</th>
-            </tr>
-            <tr>
-                <th style="border: 1px solid aquamarine; border-collapse: collapse;">8</th>
-                <th style="border: 1px solid aquamarine; border-collapse: collapse;">2004</th>
-                <th style="border: 1px solid aquamarine; border-collapse: collapse;">Pentium 4 Prescott</th>
-                <th style="border: 1px solid aquamarine; border-collapse: collapse;">64-bit/40-bit Implementação física do primeiro processador AMD</th>
-                <th style="border: 1px solid aquamarine; border-collapse: collapse;">Alta contuta, Altíssima frequencia, SSE], capacidade de 64 bits está disponível somente em soquetes LGA 775.</th>
-            </tr>
-            <tr>
-                <th style="border: 1px solid aquamarine; border-collapse: collapse;">9</th>
-                <th style="border: 1px solid aquamarine; border-collapse: collapse;">2006</th>
-                <th style="border: 1px solid aquamarine; border-collapse: collapse;">Intel Core 2</th>
-                <th style="border: 1px solid aquamarine; border-collapse: collapse;">64-bit/40-bit Implementação física do primeiro processador AMD</th>
-                <th style="border: 1px solid aquamarine; border-collapse: collapse;">baixo consumo, multi-core, menor frequencia de clock, SSE4 (Penryn)</th>
-            </tr>
-            <tr>
-                <th style="border: 1px solid aquamarine; border-collapse: collapse;">10</th>
-                <th style="border: 1px solid aquamarine; border-collapse: collapse;">2007</th>
-                <th style="border: 1px solid aquamarine; border-collapse: collapse;">AMD Phenom</th>
-                <th style="border: 1px solid aquamarine; border-collapse: collapse;">64-bit/48-bit processador físico AMD Phenom</th>
-                <th style="border: 1px solid aquamarine; border-collapse: collapse;">monolítica quad-core, 128 FPUs bit, SSE4a, HyperTransport 3 ou QuickPath, controlador de memória nativa, on-die cache L3, design modular.</th>
-            </tr>
-            <tr>
-                <th style="border: 1px solid aquamarine; border-collapse: collapse;">10</th>
-                <th style="border: 1px solid aquamarine; border-collapse: collapse;">2008</th>
-                <th style="border: 1px solid aquamarine; border-collapse: collapse;">Intel Core i3<br />Intel Core i5<br />Intel Core i7</th>
-                <th style="border: 1px solid aquamarine; border-collapse: collapse;">64-bit/48-bit processador físico AMD Phenom</th>
-                <th style="border: 1px solid aquamarine; border-collapse: collapse;">monolítica quad-core, 128 FPUs bit, SSE4a, HyperTransport 3 ou QuickPath, controlador de memória nativa, on-die cache L3, design modular.</th>
-            </tr>
-            <tr>
-                <th style="border: 1px solid aquamarine; border-collapse: collapse;">10</th>
-                <th style="border: 1px solid aquamarine; border-collapse: collapse;">2008</th>
-                <th style="border: 1px solid aquamarine; border-collapse: collapse;">Intel Atom</th>
-                <th style="border: 1px solid aquamarine; border-collapse: collapse;">64-bit/48-bit processador físico AMD Phenom</th>
-                <th style="border: 1px solid aquamarine; border-collapse: collapse;">Altamente canalisado porém com sua potência muito baixa.</th>
-            </tr>
-            <tr>
-                <th style="border: 1px solid aquamarine; border-collapse: collapse;">10</th>
-                <th style="border: 1px solid aquamarine; border-collapse: collapse;">2008</th>
-                <th style="border: 1px solid aquamarine; border-collapse: collapse;">VIA Nano</th>
-                <th style="border: 1px solid aquamarine; border-collapse: collapse;">64-bit/48-bit processador físico AMD Phenom</th>
-                <th style="border: 1px solid aquamarine; border-collapse: collapse;">Fora de ordem, superescalar, criptografia baseada em hardware, muito baixa energia, gerenciamento de energia adaptativa.</th>
-            </tr>
-            <tr>
-                <th style="border: 1px solid aquamarine; border-collapse: collapse;">10</th>
-                <th style="border: 1px solid aquamarine; border-collapse: collapse;">2010</th>
-                <th style="border: 1px solid aquamarine; border-collapse: collapse;">Intel Sandy Bridge<br>AMD Bulldozer</th>
-                <th style="border: 1px solid aquamarine; border-collapse: collapse;"></th>
-                <th style="border: 1px solid aquamarine; border-collapse: collapse;">SSE5/AVX, design altamente modular.</th>
-            </tr>
+			<tr height="auto">
+				<td style="background-color: #FFAD28;">6-M/7-M</td>
+                <td rowspan="2"
+                    style="background-color: #FFC15D;">2003</td>
+                    <td style="background-color: #FFC15D;">Pentium M<br />VIA C7 (2005)<br />Intel Core (2006)</td>
+                    <td style="background-color: #FFC15D;">Otimizados para baixo consumo</td>
+			</tr>
+			<tr height="auto">
+				<td rowspan="2"
+                style="background-color: #FFAD28;">8 (x86/64)</td>
+                <td style="background-color: #FFC15D;">Athlon 64<br />Opteron</td>
+                <td rowspan="3"
+                    style="background-color: #FFC15D;"><b>64-bit</b>/40-bit Implementação física do primeiro processador AMD</td>
+                <td style="background-color: #FFC15D;">Conjunto de instruções x86-64, controlador de memória on-die, hypertransport.</td>
+
+			</tr>
+            <tr height="auto">
+				<td style="background-color:#FFC15D">2004</td>
+                <td style="background-color: #FFC15D;">Pentium 4 Prescott</td>
+                <td style="background-color: #FFC15D;">Alta contuta, Altíssima frequencia, SSE3, capacidade de 64 bits está disponível somente em soquetes LGA 775.</td>
+			</tr>
+			<tr height="auto">
+				<td style="background-color: #FFAD28;">9</td>
+                <td style="background-color: #FFC15D;">2006</td>
+                <td style="background-color: #FFC15D;">Intel Core 2</td>
+                <td style="background-color: #FFC15D;">baixo consumo, multi-core, menor frequencia de clock, SSE4 (Penryn)</td>
+			</tr>
+			<tr height="auto">
+				<td rowspan="4"
+                style="background-color: #FFAD28;">10</td>
+                <td style="background-color: #FFC15D;">2007</td>
+                <td style="background-color: #FFC15D;">AMD Phenom</td>
+                <td rowspan="4"
+                    style="background-color: #FFC15D;">como acima/48-bit processador físico AMD Phenom</td>
+                <td rowspan="2"
+                    style="background-color: #FFC15D;">monolítica quad-core, 128 FPUs bit, SSE4a, HyperTransport 3 ou QuickPath, controlador de memória nativa, on-die cache L3, design modular.</td>
+			</tr>
+            <tr height="auto">
+                <td rowspan="3"
+                style="background-color: #FFC15D;">2008</td>
+                <td style="background-color: #FFC15D;">Intel Core i3<br />Intel Core i5<br />Intel Core i7</td>
+			</tr>
+            <tr height="auto">
+                <td style="background-color: #FFC15D;">Itel Atom</td>
+                <td style="background-color: #FFC15D;">Altamente canalisado porém com sua potência muito baixa.</td>
+			</tr>
+                <td style="background-color: #FFC15D;">VIA Nano</td>
+                <td style="background-color: #FFC15D;">Fora de ordem, superescalar, criptografia baseada em hardware, muito baixa energia, gerenciamento de energia adaptativa.</td>
+			</tr>
+			<tr height="auto">
+				<td style="background-color: #FFAD28;">11</td>
+                <td style="background-color: #FFC15D;">2010</td>
+                <td style="background-color: #FFC15D;">Intel Sandy Bridge<br />AMD Bulldozer</td>
+                <td style="background-color: #FFC15D;"></td>
+                <td style="background-color: #FFC15D;">SSE5/AVX, design altamente modular.</td>
+			</tr>			
         </table>
         <br /><br /><br /><br />
     </body>
