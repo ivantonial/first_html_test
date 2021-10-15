@@ -12,9 +12,9 @@
     </div>
     <main>
         <svg viewBox="0 0 250 50" xmlns="http://www.w3.org/2000/svg">
-            <circle style="cx:50; cy:25; r:20; stroke:black; stroke-width:1; fill:red;">
+            <circle cx="50" cy="25" r="20" stroke="black" stroke-width="1" fill="red">
                 <animate attributeType="XML" attributeName="r" from="0" to="20" 
-                         dur="3s" repeatCount="indefinite"/>
+                         dur="3s" repeatCount="indefinite" />
             </circle>
         </svg>
         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="margin: auto; background: none; display: block; shape-rendering: auto;" width="200px" height="200px" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid">
@@ -153,13 +153,161 @@
             <!-- O SVG acima pode ser diminuído com o parâmetro "Z" ou "z" no final do atributo "d" do Path. O parâmetro "Z"
                 serve para indicar que é uma figura fechada e que se deve voltar para o ponto inicial.
             -->
-            <path d="M 10 10 H 90 V 90 H 10 Z"/>
+            <path d="M 10 10 H 90 V 90 H 10 Z" stroke="black" stroke-width="2px" fill="transparent" />
 
             <!-- Points -->
             <circle cx="10" cy="10" r="2" fill="red"/>
             <circle cx="90" cy="90" r="2" fill="red"/>
             <circle cx="90" cy="10" r="2" fill="red"/>
         </svg>
+        <!-- CURVE COMMANDS -->
+        <!--
+            Existem 3 diferentes comandos que podem ser usados para criar curvas suaves. Duas destas curvas são curvas de Bézier, 
+            e a terceira é o arco ("arc") ou parte do circulo. Existe uma infinidade de curvas de Bézier, mas apenas duas estão 
+            presentes no elemento <path>: A cúbica chamada por "C" e a quadrática, chamada por "Q".
+        -->
+            <!-- Bézier Curves
+                A Curva cúbica, "C", é a curva levemente mais complexa. Estas curvas levam dois pontos de controle cada ponto. Portanto,
+                para criar uma Cúbica de Bézier, é necessário especificar três pares de coordenadas.
+            -->
+            <!--
+                C x1 y1, x2 y2, x y (ou) c dx1 dy1, dx2 dy2, dx, dy 
+            -->
+            <!--
+                O último par de coordenadas (x,y) especifica onde a linha deve terminar. As outras duas coordenadas são pontos de controle.
+                (x1,y1) é o ponto de controle para o início da curva, e (x2, y2) o ponto de controle do final da curva.
+            -->
+        <svg width="190" height="160" xmlns="http://www.w3.org/2000/svg">
+
+        <path d="M 10 10 C 20 20, 40 20, 50 10" stroke="black" fill="transparent"/>
+        <path d="M 70 10 C 70 20, 110 20, 110 10" stroke="black" fill="transparent"/>
+        <path d="M 130 10 C 120 20, 180 20, 170 10" stroke="black" fill="transparent"/>
+        <path d="M 10 60 C 20 80, 40 80, 50 60" stroke="black" fill="transparent"/>
+        <path d="M 70 60 C 70 80, 110 80, 110 60" stroke="black" fill="transparent"/>
+        <path d="M 130 60 C 120 80, 180 80, 170 60" stroke="black" fill="transparent"/>
+        <path d="M 10 110 C 20 140, 40 140, 50 110" stroke="black" fill="transparent"/>
+        <path d="M 70 110 C 70 140, 110 140, 110 110" stroke="black" fill="transparent"/>
+        <path d="M 130 110 C 120 140, 180 140, 170 110" stroke="black" fill="transparent"/>
+
+        </svg>
+            <!-- Several Bézier Curves
+                Várias curvas de Bézier podem ser amarradas juntas para criar formas extendidas e suaves. Frequentemente, o ponto de controle
+                de um ponto será um reflexo do ponto de controle usado no outro lado para manter a inclinação constante. Neste caso, uma versão 
+                resumida do cúbico de Bézier pode ser usada, designada pelo comando "S" ou "s".
+            -->
+            <!--
+                "S" produz o mesmo tipo de curva que anteriormente, mas se é seguido por outro comando "S" ou o comando "C", o primeiro ponto de
+                controle é assumido como sendo uma reflexão do usado previamente. Se o comando "S" não seguir outro comando "S" ou "C", então a 
+                posição atual do cursor é usada como o primeiro ponto de controle. Neste caso, o resultado é o mesmo que o comando "Q" teria 
+                produzido com os mesmos parâmetros.
+            -->
+        <svg width="190" height="160" xmlns="http://www.w3.org/2000/svg">
+            <path d="M 10 80 C 40 10, 65 10, 95 80 S 150 150, 180 80" stroke="black" fill="transparent"/>
+        </svg>
+        <br />
+            <!-- Quadratic Curve
+                O outro tipo de curva de Bézier, a curva quadrática é chamada pelo comando "Q", é uma curva mais simples que a cúbica. Ela requer
+                um ponto de controle que determina a inclinação da curva tanto no ponto inicial quanto no ponto final. Leva dois parâmetros: o 
+                ponto de controle e o ponto final da curva.
+            -->
+            <!-- Q x1 y1, x y (ou) q dx1 dy1, dx dy -->
+        <svg width="190" height="160" xmlns="http://www.w3.org/2000/svg">
+            <path d="M 10 80 Q 95 10 180 80" stroke="black" fill="transparent"/>
+        </svg>
+            <!-- Tal como acontece com a curva de Bézier cúbica, há um atalho para encadear vários Béziers quadráticos, chamados com "T".
+                T x y (ou) t dx dy
+            -->
+            <!--
+                Este atalho examina o ponto de controle anterior usado e infere um novo a partir dele. Isso significa que, após o primeiro
+                ponto de controle, formas bastante complexas podem ser criadas especificando-se apenas os pontos finais.
+                Isso só funciona se o comando anterior for um comando Q ou T. Caso contrário, o ponto de controle é considerado igual ao 
+                ponto anterior e apenas as linhas serão desenhadas. 
+            -->
+        <svg width="190" height="160" xmlns="http://www.w3.org/2000/svg">
+            <path d="M 10 80 Q 52.5 10, 95 80 T 180 80" stroke="black" fill="transparent"/>
+        </svg>
+        <!-- Arcos -->
+        <!--
+            O outro tipo de linha curva que pode ser criada usando SVG é o arco, chamado com o comando A. Arcos são seções de círculos ou elipses.
+            Para um determinado raio xey, há duas elipses que podem conectar quaisquer dois pontos (desde que estejam dentro do raio do círculo).
+            Ao longo de qualquer um desses círculos, há dois caminhos possíveis que podem ser seguidos para conectar os pontos - portanto, em 
+            qualquer situação, há quatro arcos possíveis disponíveis.
+
+            Por causa disso, os arcos requerem alguns parâmetros:
+            A rx ry x-axis-rotation large-arc-flag sweep-flag x y
+            (ou)
+            a rx ry x-axis-rotation large-arc-flag sweep-flag dx dy
+        -->
+        <!--
+            Em seu início, o elemento arc assume dois parâmetros para o raio xeo raio y. Se necessário, veja <ellipse> se como eles se comportam. 
+            Os dois parâmetros finais designam as coordenadas xey para encerrar o traço. Juntos, esses quatro valores definem a estrutura básica do arco.
+            O terceiro parâmetro descreve a rotação do arco. Isso é melhor explicado com um exemplo: 
+        -->
+        <svg width="320" height="320" xmlns="http://www.w3.org/2000/svg">
+            <path d="M 10 315
+                     L 110 215
+                     A 30 50 0 0 1 162.55 162.45
+                     L 172.55 152.45
+                     A 30 50 -45 0 1 215.1 109.9
+                     L 315 10" stroke="black" fill="#68b0ab" stroke-width="2" fill-opacity="0.5"/>
+        </svg>
+        <!--
+            O exemplo mostra um elemento <path> que atravessa a página diagonalmente. Em seu centro, dois arcos elípticos foram cortados 
+            (raio x = 30, raio y = 50). No primeiro, a rotação do eixo x foi deixada em 0, então a elipse em torno da qual o arco percorre
+            (mostrada em cinza) é orientada diretamente para cima e para baixo. Para o segundo arco, porém, a rotação do eixo x é definida para -45 graus.
+            Isso gira a elipse para que fique alinhada com seu eixo menor ao longo da direção do caminho, conforme mostrado pela segunda elipse na imagem
+            de exemplo.
+
+            Para a elipse não girada na imagem acima, existem apenas dois arcos diferentes e não quatro para escolher, porque a linha desenhada do início
+            e do final do arco passa pelo centro da elipse. Em um exemplo ligeiramente modificado, as duas elipses que formam os quatro arcos diferentes
+            podem ser vistas: 
+        -->
+        <svg xmlns="http://www.w3.org/2000/svg" width="320" height="320">
+            <path d="M 10 315
+                     L 110 215
+                     A 36 60 0 0 1 150.71 170.29
+                     L 172.55 152.45
+                     A 30 50 -45 0 1 215.1 109.9
+                     L 315 10" stroke="black" fill="#68b0ab" stroke-width="2" fill-opacity="0.5"/>
+            <circle cx="150.71" cy="170.29" r="2" fill="red"/>
+            <circle cx="110" cy="215" r="2" fill="red"/>
+            <ellipse cx="144.931" cy="229.512" rx="36" ry="60" fill="transparent" stroke="blue"/>
+            <ellipse cx="115.779" cy="155.778" rx="36" ry="60" fill="transparent" stroke="blue"/>
+          </svg>
+          <br />
+          <!-- 
+              Observe que cada uma das elipses azuis é formada por dois arcos, dependendo do deslocamento no sentido horário ou anti-horário. Cada elipse
+              possui um arco curto e um arco longo. As duas elipses são apenas imagens espelhadas uma da outra. Eles são invertidos ao longo da linha formada 
+              a partir dos pontos inicial → final.
+
+              Se os pontos inicial → final estiverem mais longe do que os raios xey da elipse podem alcançar, os raios da elipse serão minimamente expandidos 
+              para que ela possa atingir os pontos inicial → final. O código interativo na parte inferior desta página demonstra bem isso. Para determinar se 
+              os raios de uma elipse são grandes o suficiente para exigir expansão, um sistema de equações precisaria ser resolvido, como este no volfrâmio alfa. 
+              Este cálculo é para a elipse não girada com início → fim (110, 215) → (150,71, 170,29). A solução, (x, y), é o centro da (s) elipse (s). A solução 
+              será imaginária se os raios da elipse forem muito pequenos. Este segundo cálculo é para a elipse não girada com início → fim (110, 215) → (162,55, 162,45). 
+              A solução tem um pequeno componente imaginário porque a elipse quase não foi expandida.
+
+              Os quatro caminhos diferentes mencionados acima são determinados pelos próximos dois sinalizadores de parâmetro. Como mencionado anteriormente, 
+              ainda há duas elipses possíveis para o caminho percorrer e dois caminhos possíveis diferentes em ambas as elipses, dando quatro caminhos possíveis. 
+              O primeiro parâmetro é o sinalizador de arco grande. Determina se o arco deve ser maior ou menor que 180 graus; no final, esta bandeira determina em 
+              qual direção o arco percorrerá em torno de um determinado círculo. O segundo parâmetro é a bandeira de varredura. Ele determina se o arco deve 
+              começar a se mover em ângulos positivos ou negativos, o que essencialmente escolhe qual dos dois círculos será percorrido. O exemplo abaixo mostra 
+              todas as quatro combinações possíveis, junto com os dois círculos para cada caso.
+          -->
+          <svg width="325" height="325" xmlns="http://www.w3.org/2000/svg">
+            <path d="M 80 80
+                     A 45 45, 0, 0, 0, 125 125
+                     L 125 80 Z" fill="green"/>
+            <path d="M 230 80
+                     A 45 45, 0, 1, 0, 275 125
+                     L 275 80 Z" fill="red"/>
+            <path d="M 80 230
+                     A 45 45, 0, 0, 1, 125 275
+                     L 125 230 Z" fill="purple"/>
+            <path d="M 230 230
+                     A 45 45, 0, 1, 1, 275 275
+                     L 275 230 Z" fill="blue"/>
+          </svg>
     </main>
 </body>
 </html>
