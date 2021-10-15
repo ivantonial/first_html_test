@@ -12,7 +12,7 @@
     </div>
     <main>
         <svg viewBox="0 0 250 50" xmlns="http://www.w3.org/2000/svg">
-            <circle style="cx:50; cy:25; r:20; stroke:black; stroke-width:1; fill:red">
+            <circle style="cx:50; cy:25; r:20; stroke:black; stroke-width:1; fill:red;">
                 <animate attributeType="XML" attributeName="r" from="0" to="20" 
                          dur="3s" repeatCount="indefinite"/>
             </circle>
@@ -66,9 +66,100 @@
         <path d="M10.734 20.435"></path>
         <path fill="#1D1D1B" d="M33.762 13.17c-.036-5.59-4.613-10.107-10.201-10.071-5.59.036-10.108 4.612-10.072 10.202.009 1.455.33 2.837.892 4.084h-.002l9.407 20.57 9.14-20.689h-.002c.546-1.255.847-2.641.838-4.096zm-10.086 7.844c-4.289.027-7.801-3.439-7.829-7.729-.027-4.288 3.439-7.801 7.729-7.829 4.289-.027 7.801 3.44 7.829 7.729.027 4.29-3.441 7.801-7.729 7.829z"></path>
     </svg>
-    <svg viewBox="0 0 250 50" xmlns="http://www.w3.org/2000/svg">
-        
+    <svg viewBox="0 0 250 115" xmlns="http://www.w3.org/2000/svg">
+        <g style="fill:#ebffca; stroke:cadetblue; stroke-width: 3;">
+            <circle cx="35" cy="35" r="25" />
+            <circle cx="60" cy="60" r="30" />
+            <circle cx="85" cy="85" r="25" />
+        </g>
     </svg>
+    <svg width="2000" height="2500" version="1.1" xmlns="http://www.w3.org/2000/svg">
+        <!-- Rectangle
+            x = posição x a partir do canto superior esquerdo
+            y = posição y a partir do canto superior esquerdo
+            width = largura do retangulo
+            height = altura do retangulo
+            rx = raio x das pontas do retangulo
+            ry = raio y das pontas do retangulo
+        -->
+        <rect x="100" y="100" width="300" height="300" stroke="black" fill="transparent" stroke-width="5"/>
+        <rect x="600" y="100" rx="100" ry="100" width="300" height="300" stroke="black" fill="transparent" stroke-width="5"/>
+        <!-- Circle / Ellipse
+            r = raio do círculo / rx = raio x da elipse & ry = raio y da elipse
+            cx = posição x do centro do circulo/elipse
+            cy = posição y do centro do círculo/elipse
+        -->
+        <circle cx="250" cy="750" r="200" stroke="red" fill="transparent" stroke-width="5"/>
+        <ellipse cx="750" cy="750" rx="200" ry="50" stroke="red" fill="transparent" stroke-width="5"/>
+        <!-- Line
+            x1 = posição x do primeiro ponto da linha
+            y1 = posição y do primeiro ponto da linha
+            x2 = posição x do segundo ponto da linha
+            y2 = posição y do segundo ponto da linha
+        -->
+        <!-- Polyline
+            cada ponto deve conter dois numeros, um para a coordenada x e outro para a coordenada y
+            os pontos (0,0), (1,1), (2,2) devem ser escritos como 0, 0, 1, 1, 2, 2
+        -->
+        <line x1="100" x2="500" y1="1100" y2="1500" stroke="orange" stroke-width="5"/>
+        <polyline points="600 1100 650 1200 700 1150 750 1300 800 1250 850 1400 900 1350 950 1500 1000 1450"
+            stroke="orange" fill="transparent" stroke-width="5"/>
+        <!-- Polygon
+            Similar ao Polyline, porém este automaticamente liga o último ponto ao primeiro, criando uma forma fechada
+        -->
+        <polygon points="500 1600 550 1800 700 1800 600 1900 650 2050 500 1950 350 2050 400 1900 300 1800 450 1800"
+            stroke="green" fill="transparent" stroke-width="5"/>
+        
+        <path d="M200,2300 Q400,2050 500,2300 T900,2300" fill="none" stroke="blue" stroke-width="5"/>
+        </svg>
+        <!-- Path
+            É o mais geral que pode ser usado em SVG. Com o elemento Path é possível desenhar retangulos(c/ ou s/ bordas arredondadas),
+            círculos, polylines e poligonos. Basicamente pode se desenhar vários tipos de curvas.
+            O formato do elemento <path> é definido pelo parâmetro "d". O atributo "d" contem uma série de comandos e parâmetros usados por
+            esses comandos.
+            M = mover para uma coordenada (x, y). (onde irá começar)
+            Line Commands:
+            M x y (ou) m dx dy
+        -->
+        <svg width="200" height="200" xmlns="http://www.w3.org/2000/svg">
+
+            <path d="M 10 10"/>
+          
+            <!-- Points -->
+            <circle cx="60" cy="20" r="3" fill="red"/>
+            <circle cx="80" cy="40" r="3" fill="red"/>
+
+        </svg>
+        <svg>
+            <!-- Continuação Path -->
+            <!--
+                Existem 3 comandos que desenham linhas. O mais genérico é o comando "Line To", chamado por "L".
+                L rrecebe 2 parâmetros - coordenadas x e y - e desenha uma linha do ponto atual até a nova posição.
+                L x y (ou) l dx dy
+            -->
+            <!-- Existem duas formas abreviadas para desenhar linhas horizontal e vertical. "H" desenha uma linha horizontal, 
+                e "V" desenha uma linha vertical. Ambos parâmetros apenas recebem um parâmetro, uma vez que só se movem em
+                uma única direção.
+            -->
+            <path d="M 10 10 H 90 V 90 H 10 L 10 10"/>
+
+            <!-- Points -->
+            <circle cx="10" cy="10" r="2" fill="red"/>
+            <circle cx="90" cy="90" r="2" fill="red"/>
+            <circle cx="90" cy="10" r="2" fill="red"/>
+            <circle cx="10" cy="90" r="2" fill="red"/>
+        </svg>
+        <svg>
+            <!-- O SVG acima pode ser diminuído com o parâmetro "Z" ou "z" no final do atributo "d" do Path. O parâmetro "Z"
+                serve para indicar que é uma figura fechada e que se deve voltar para o ponto inicial.
+            -->
+            <path d="M 10 10 H 90 V 90 H 10 Z"/>
+
+            <!-- Points -->
+            <circle cx="10" cy="10" r="2" fill="red"/>
+            <circle cx="90" cy="90" r="2" fill="red"/>
+            <circle cx="90" cy="10" r="2" fill="red"/>
+        </svg>
     </main>
 </body>
 </html>
