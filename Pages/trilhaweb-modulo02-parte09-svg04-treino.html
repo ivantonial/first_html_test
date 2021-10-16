@@ -273,28 +273,28 @@
             <circle cx="110" cy="215" r="2" fill="red"/>
             <ellipse cx="144.931" cy="229.512" rx="36" ry="60" fill="transparent" stroke="blue"/>
             <ellipse cx="115.779" cy="155.778" rx="36" ry="60" fill="transparent" stroke="blue"/>
-          </svg>
-          <br />
-          <!-- 
-              Observe que cada uma das elipses azuis é formada por dois arcos, dependendo do deslocamento no sentido horário ou anti-horário. Cada elipse
-              possui um arco curto e um arco longo. As duas elipses são apenas imagens espelhadas uma da outra. Eles são invertidos ao longo da linha formada 
-              a partir dos pontos inicial → final.
+        </svg>
+        <br />
+        <!-- 
+            Observe que cada uma das elipses azuis é formada por dois arcos, dependendo do deslocamento no sentido horário ou anti-horário. Cada elipse
+            possui um arco curto e um arco longo. As duas elipses são apenas imagens espelhadas uma da outra. Eles são invertidos ao longo da linha formada 
+            a partir dos pontos inicial → final.
 
-              Se os pontos inicial → final estiverem mais longe do que os raios xey da elipse podem alcançar, os raios da elipse serão minimamente expandidos 
-              para que ela possa atingir os pontos inicial → final. O código interativo na parte inferior desta página demonstra bem isso. Para determinar se 
-              os raios de uma elipse são grandes o suficiente para exigir expansão, um sistema de equações precisaria ser resolvido, como este no volfrâmio alfa. 
-              Este cálculo é para a elipse não girada com início → fim (110, 215) → (150,71, 170,29). A solução, (x, y), é o centro da (s) elipse (s). A solução 
-              será imaginária se os raios da elipse forem muito pequenos. Este segundo cálculo é para a elipse não girada com início → fim (110, 215) → (162,55, 162,45). 
-              A solução tem um pequeno componente imaginário porque a elipse quase não foi expandida.
+            Se os pontos inicial → final estiverem mais longe do que os raios xey da elipse podem alcançar, os raios da elipse serão minimamente expandidos 
+            para que ela possa atingir os pontos inicial → final. O código interativo na parte inferior desta página demonstra bem isso. Para determinar se 
+            os raios de uma elipse são grandes o suficiente para exigir expansão, um sistema de equações precisaria ser resolvido, como este no volfrâmio alfa. 
+            Este cálculo é para a elipse não girada com início → fim (110, 215) → (150,71, 170,29). A solução, (x, y), é o centro da (s) elipse (s). A solução 
+            será imaginária se os raios da elipse forem muito pequenos. Este segundo cálculo é para a elipse não girada com início → fim (110, 215) → (162,55, 162,45). 
+            A solução tem um pequeno componente imaginário porque a elipse quase não foi expandida.
 
-              Os quatro caminhos diferentes mencionados acima são determinados pelos próximos dois sinalizadores de parâmetro. Como mencionado anteriormente, 
-              ainda há duas elipses possíveis para o caminho percorrer e dois caminhos possíveis diferentes em ambas as elipses, dando quatro caminhos possíveis. 
-              O primeiro parâmetro é o sinalizador de arco grande. Determina se o arco deve ser maior ou menor que 180 graus; no final, esta bandeira determina em 
-              qual direção o arco percorrerá em torno de um determinado círculo. O segundo parâmetro é a bandeira de varredura. Ele determina se o arco deve 
-              começar a se mover em ângulos positivos ou negativos, o que essencialmente escolhe qual dos dois círculos será percorrido. O exemplo abaixo mostra 
-              todas as quatro combinações possíveis, junto com os dois círculos para cada caso.
-          -->
-          <svg width="325" height="325" xmlns="http://www.w3.org/2000/svg">
+            Os quatro caminhos diferentes mencionados acima são determinados pelos próximos dois sinalizadores de parâmetro. Como mencionado anteriormente, 
+            ainda há duas elipses possíveis para o caminho percorrer e dois caminhos possíveis diferentes em ambas as elipses, dando quatro caminhos possíveis. 
+            O primeiro parâmetro é o sinalizador de arco grande. Determina se o arco deve ser maior ou menor que 180 graus; no final, esta bandeira determina em 
+            qual direção o arco percorrerá em torno de um determinado círculo. O segundo parâmetro é a bandeira de varredura. Ele determina se o arco deve 
+            começar a se mover em ângulos positivos ou negativos, o que essencialmente escolhe qual dos dois círculos será percorrido. O exemplo abaixo mostra 
+            todas as quatro combinações possíveis, junto com os dois círculos para cada caso.
+        -->
+        <svg width="325" height="325" xmlns="http://www.w3.org/2000/svg">
             <path d="M 80 80
                      A 45 45, 0, 0, 0, 125 125
                      L 125 80 Z" fill="green"/>
@@ -307,7 +307,89 @@
             <path d="M 230 230
                      A 45 45, 0, 1, 1, 275 275
                      L 275 230 Z" fill="blue"/>
-          </svg>
+        </svg>
+        <!-- Fills and Strokes -->
+        <!--
+            Existem várias maneiras de colorir formas (incluindo a especificação de atributos no objeto) usando CSS embutido, uma seção CSS incorporada ou um 
+            arquivo CSS externo. A maioria dos SVG que você encontrará na web usa CSS embutido, mas há vantagens e desvantagens associadas a cada tipo. 
+        -->
+        <!-- Fill and Stroke Attributes -->
+        <!-- Painting
+           A coloração básica pode ser feita definindo dois atributos no nó: "fill" e "stroke". Usar "fill" define a cor dentro do objeto e o "stroke" 
+           define a cor da linha desenhada ao redor do objeto. Você pode usar os mesmos esquemas de nomenclatura de cores css que usa em HTML, sejam nomes de 
+           cores (ou seja, vermelho), valores rgb (ou seja, rgb (255,0,0)), valores hexadecimais, valores rgba, etc. 
+        -->
+        <svg>
+            <rect x="10" y="10" width="100" height="100" stroke="blue" fill="purple"
+            fill-opacity="0.5" stroke-opacity="0.8"/>
+        </svg>
+        <!--
+            Além disso, você pode especificar a opacidade de ambos, o "fill" ou o "stroke" separadamente no SVG. Estes são controlados pelos atributos "fill-opacity"
+            e "stroke-opacity".
+        -->
+        <!-- Stoke -->
+        <!--
+            Alem de suas propriedades de cor, existem alguns outros atributos disponíveis para controlar a maneira como o "stroke" é desenhado em uma linha.
+        -->
+        <br />
+        <svg width="160" height="140" xmlns="http://www.w3.org/2000/svg" version="1.1">
+            <line x1="40" x2="120" y1="20" y2="20" stroke="black" stroke-width="20" stroke-linecap="butt" />
+            <line x1="40" x2="120" y1="60" y2="60" stroke="black" stroke-width="20" stroke-linecap="square" />
+            <line x1="40" x2="120" y1="100" y2="100" stroke="black" stroke-width="20" stroke-linecap="round" />
+        </svg>
+        <!--
+            A propriedade "stroke-width" define a largura desse traço. Os traços são desenhados centralizados ao redor do caminho. No exemplo acima, o caminho é 
+            mostrado em rosa e o traço em preto.
+
+            O segundo atributo que afeta os traços é a propriedade "stroke-linecap", demonstrada acima. Isso controla a forma das extremidades das linhas.
+
+            Existem três valores possíveis para o "stroke-linecap":
+             - "butt" fecha a linha com uma borda reta que é normal (a 90 graus) à direção do traço e cruza seu final.
+             - "square" tem essencialmente a mesma aparência, mas estende o traço um pouco além do caminho real. A distância que o traço vai além do caminho é
+               a metade do "stroke-width".
+             - "round" produz um efeito arredondado no final do traço. O raio desta curva também é controlado pelo "stroke-width".
+          
+            Use "stroke-linejoin" para controlar como a junta entre dois segmentos de linha é desenhada. 
+        -->
+        <svg width="160" height="280" xmlns="http://www.w3.org/2000/svg" version="1.1">
+            <polyline points="40 60 80 20 120 60" stroke="black" stroke-width="20"
+                      stroke-linecap="butt" fill="none" stroke-linejoin="miter"/>
+              
+            <polyline points="40 140 80 100 120 140" stroke="black" stroke-width="20"
+                      stroke-linecap="round" fill="none" stroke-linejoin="round"/>
+              
+            <polyline points="40 220 80 180 120 220" stroke="black" stroke-width="20"
+                      stroke-linecap="square" fill="none" stroke-linejoin="bevel"/>
+        </svg>
+        <!--
+            Cada uma dessas polilinhas possui dois segmentos. A junta onde os dois se encontram é controlada pelo atributo "stroke-linejoin". Existem três valores
+            possíveis para este atributo. "mitre" estende a linha ligeiramente além de sua largura normal para criar um canto quadrado onde apenas um ângulo é usado.
+            "round" cria um segmento de linha arredondado. "bevel" cria um novo ângulo para auxiliar na transição entre os dois segmentos.
+
+            Por fim, você também pode usar tipos de linha tracejada em um traço, especificando o atributo "stroke-dasharray". 
+        -->
+        <svg width="200" height="150" xmlns="http://www.w3.org/2000/svg" version="1.1">
+            <path d="M 10 75 Q 50 10 100 75 T 190 75" stroke="black"
+                  stroke-linecap="round" stroke-dasharray="5,10,5" fill="none"/>
+            <path d="M 10 75 L 190 75" stroke="red"
+                  stroke-linecap="round" stroke-width="1" stroke-dasharray="5,5" fill="none"/>
+        </svg>
+        <!--
+            O atributo stroke-dasharray usa uma série de números separados por vírgula como argumento. 
+        -->
+        <!--
+            Nota: Ao contrário dos elementos <path>, esses números devem ser separados por vírgulas (os espaços em branco são ignorados). 
+        -->
+        <!--
+            O primeiro número especifica uma distância para a área preenchida e o segundo uma distância para a área não preenchida. Portanto, no exemplo acima, o segundo 
+            caminho preenche 5 unidades de pixel, com 5 unidades em branco até o próximo traço de 5 unidades. Você pode especificar mais números se desejar um padrão de 
+            traço mais complicado. O primeiro exemplo especifica três números, caso em que o renderizador faz um loop nos números duas vezes para criar um padrão par. 
+            Portanto, o primeiro caminho renderiza 5 preenchido, 10 vazio, 5 preenchido e, em seguida, retorna para criar 5 vazio, 10 preenchido e 5 vazio. O padrão então 
+            se repete.
+
+            Existem propriedades adicionais de "stroke" e "fill" disponíveis, incluindo "fill-rule", que especifica como colorir as formas que se sobrepõem; 
+            "stroke-miterlimit", que determina se traço deve atrair mitras; e "stroke-dashoffset", que especifica onde iniciar um dasharray em uma linha.
+        -->
     </main>
 </body>
 </html>
