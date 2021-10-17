@@ -137,7 +137,7 @@
                 L rrecebe 2 parâmetros - coordenadas x e y - e desenha uma linha do ponto atual até a nova posição.
                 L x y (ou) l dx dy
             -->
-            <!-- Existem duas formas abreviadas para desenhar linhas horizontal e vertical. "H" desenha uma linha horizontal, 
+            <!-- Existem duas formas abreviadas para desenhar linhas horizontal e vertical. "H" desenha uma linha horizontal,
                 e "V" desenha uma linha vertical. Ambos parâmetros apenas recebem um parâmetro, uma vez que só se movem em
                 uma única direção.
             -->
@@ -162,8 +162,8 @@
         </svg>
         <!-- CURVE COMMANDS -->
         <!--
-            Existem 3 diferentes comandos que podem ser usados para criar curvas suaves. Duas destas curvas são curvas de Bézier, 
-            e a terceira é o arco ("arc") ou parte do circulo. Existe uma infinidade de curvas de Bézier, mas apenas duas estão 
+            Existem 3 diferentes comandos que podem ser usados para criar curvas suaves. Duas destas curvas são curvas de Bézier,
+            e a terceira é o arco ("arc") ou parte do circulo. Existe uma infinidade de curvas de Bézier, mas apenas duas estão
             presentes no elemento <path>: A cúbica chamada por "C" e a quadrática, chamada por "Q".
         -->
             <!-- Bézier Curves
@@ -171,7 +171,7 @@
                 para criar uma Cúbica de Bézier, é necessário especificar três pares de coordenadas.
             -->
             <!--
-                C x1 y1, x2 y2, x y (ou) c dx1 dy1, dx2 dy2, dx, dy 
+                C x1 y1, x2 y2, x y (ou) c dx1 dy1, dx2 dy2, dx, dy
             -->
             <!--
                 O último par de coordenadas (x,y) especifica onde a linha deve terminar. As outras duas coordenadas são pontos de controle.
@@ -192,13 +192,13 @@
         </svg>
             <!-- Several Bézier Curves
                 Várias curvas de Bézier podem ser amarradas juntas para criar formas extendidas e suaves. Frequentemente, o ponto de controle
-                de um ponto será um reflexo do ponto de controle usado no outro lado para manter a inclinação constante. Neste caso, uma versão 
+                de um ponto será um reflexo do ponto de controle usado no outro lado para manter a inclinação constante. Neste caso, uma versão
                 resumida do cúbico de Bézier pode ser usada, designada pelo comando "S" ou "s".
             -->
             <!--
                 "S" produz o mesmo tipo de curva que anteriormente, mas se é seguido por outro comando "S" ou o comando "C", o primeiro ponto de
-                controle é assumido como sendo uma reflexão do usado previamente. Se o comando "S" não seguir outro comando "S" ou "C", então a 
-                posição atual do cursor é usada como o primeiro ponto de controle. Neste caso, o resultado é o mesmo que o comando "Q" teria 
+                controle é assumido como sendo uma reflexão do usado previamente. Se o comando "S" não seguir outro comando "S" ou "C", então a
+                posição atual do cursor é usada como o primeiro ponto de controle. Neste caso, o resultado é o mesmo que o comando "Q" teria
                 produzido com os mesmos parâmetros.
             -->
         <svg width="190" height="160" xmlns="http://www.w3.org/2000/svg">
@@ -207,7 +207,7 @@
         <br />
             <!-- Quadratic Curve
                 O outro tipo de curva de Bézier, a curva quadrática é chamada pelo comando "Q", é uma curva mais simples que a cúbica. Ela requer
-                um ponto de controle que determina a inclinação da curva tanto no ponto inicial quanto no ponto final. Leva dois parâmetros: o 
+                um ponto de controle que determina a inclinação da curva tanto no ponto inicial quanto no ponto final. Leva dois parâmetros: o
                 ponto de controle e o ponto final da curva.
             -->
             <!-- Q x1 y1, x y (ou) q dx1 dy1, dx dy -->
@@ -220,7 +220,7 @@
             <!--
                 Este atalho examina o ponto de controle anterior usado e infere um novo a partir dele. Isso significa que, após o primeiro
                 ponto de controle, formas bastante complexas podem ser criadas especificando-se apenas os pontos finais.
-                Isso só funciona se o comando anterior for um comando Q ou T. Caso contrário, o ponto de controle é considerado igual ao 
+                Isso só funciona se o comando anterior for um comando Q ou T. Caso contrário, o ponto de controle é considerado igual ao
                 ponto anterior e apenas as linhas serão desenhadas. 
             -->
         <svg width="190" height="160" xmlns="http://www.w3.org/2000/svg">
@@ -230,7 +230,7 @@
         <!--
             O outro tipo de linha curva que pode ser criada usando SVG é o arco, chamado com o comando A. Arcos são seções de círculos ou elipses.
             Para um determinado raio xey, há duas elipses que podem conectar quaisquer dois pontos (desde que estejam dentro do raio do círculo).
-            Ao longo de qualquer um desses círculos, há dois caminhos possíveis que podem ser seguidos para conectar os pontos - portanto, em 
+            Ao longo de qualquer um desses círculos, há dois caminhos possíveis que podem ser seguidos para conectar os pontos - portanto, em
             qualquer situação, há quatro arcos possíveis disponíveis.
 
             Por causa disso, os arcos requerem alguns parâmetros:
@@ -239,7 +239,7 @@
             a rx ry x-axis-rotation large-arc-flag sweep-flag dx dy
         -->
         <!--
-            Em seu início, o elemento arc assume dois parâmetros para o raio xeo raio y. Se necessário, veja <ellipse> se como eles se comportam. 
+            Em seu início, o elemento arc assume dois parâmetros para o raio xeo raio y. Se necessário, veja <ellipse> se como eles se comportam.
             Os dois parâmetros finais designam as coordenadas xey para encerrar o traço. Juntos, esses quatro valores definem a estrutura básica do arco.
             O terceiro parâmetro descreve a rotação do arco. Isso é melhor explicado com um exemplo: 
         -->
@@ -252,7 +252,7 @@
                      L 315 10" stroke="black" fill="#68b0ab" stroke-width="2" fill-opacity="0.5"/>
         </svg>
         <!--
-            O exemplo mostra um elemento <path> que atravessa a página diagonalmente. Em seu centro, dois arcos elípticos foram cortados 
+            O exemplo mostra um elemento <path> que atravessa a página diagonalmente. Em seu centro, dois arcos elípticos foram cortados
             (raio x = 30, raio y = 50). No primeiro, a rotação do eixo x foi deixada em 0, então a elipse em torno da qual o arco percorre
             (mostrada em cinza) é orientada diretamente para cima e para baixo. Para o segundo arco, porém, a rotação do eixo x é definida para -45 graus.
             Isso gira a elipse para que fique alinhada com seu eixo menor ao longo da direção do caminho, conforme mostrado pela segunda elipse na imagem
@@ -277,21 +277,21 @@
         <br />
         <!-- 
             Observe que cada uma das elipses azuis é formada por dois arcos, dependendo do deslocamento no sentido horário ou anti-horário. Cada elipse
-            possui um arco curto e um arco longo. As duas elipses são apenas imagens espelhadas uma da outra. Eles são invertidos ao longo da linha formada 
+            possui um arco curto e um arco longo. As duas elipses são apenas imagens espelhadas uma da outra. Eles são invertidos ao longo da linha formada
             a partir dos pontos inicial → final.
 
-            Se os pontos inicial → final estiverem mais longe do que os raios xey da elipse podem alcançar, os raios da elipse serão minimamente expandidos 
-            para que ela possa atingir os pontos inicial → final. O código interativo na parte inferior desta página demonstra bem isso. Para determinar se 
-            os raios de uma elipse são grandes o suficiente para exigir expansão, um sistema de equações precisaria ser resolvido, como este no volfrâmio alfa. 
-            Este cálculo é para a elipse não girada com início → fim (110, 215) → (150,71, 170,29). A solução, (x, y), é o centro da (s) elipse (s). A solução 
-            será imaginária se os raios da elipse forem muito pequenos. Este segundo cálculo é para a elipse não girada com início → fim (110, 215) → (162,55, 162,45). 
+            Se os pontos inicial → final estiverem mais longe do que os raios xey da elipse podem alcançar, os raios da elipse serão minimamente expandidos
+            para que ela possa atingir os pontos inicial → final. O código interativo na parte inferior desta página demonstra bem isso. Para determinar se
+            os raios de uma elipse são grandes o suficiente para exigir expansão, um sistema de equações precisaria ser resolvido, como este no volfrâmio alfa.
+            Este cálculo é para a elipse não girada com início → fim (110, 215) → (150,71, 170,29). A solução, (x, y), é o centro da (s) elipse (s). A solução
+            será imaginária se os raios da elipse forem muito pequenos. Este segundo cálculo é para a elipse não girada com início → fim (110, 215) → (162,55, 162,45).
             A solução tem um pequeno componente imaginário porque a elipse quase não foi expandida.
 
-            Os quatro caminhos diferentes mencionados acima são determinados pelos próximos dois sinalizadores de parâmetro. Como mencionado anteriormente, 
-            ainda há duas elipses possíveis para o caminho percorrer e dois caminhos possíveis diferentes em ambas as elipses, dando quatro caminhos possíveis. 
-            O primeiro parâmetro é o sinalizador de arco grande. Determina se o arco deve ser maior ou menor que 180 graus; no final, esta bandeira determina em 
-            qual direção o arco percorrerá em torno de um determinado círculo. O segundo parâmetro é a bandeira de varredura. Ele determina se o arco deve 
-            começar a se mover em ângulos positivos ou negativos, o que essencialmente escolhe qual dos dois círculos será percorrido. O exemplo abaixo mostra 
+            Os quatro caminhos diferentes mencionados acima são determinados pelos próximos dois sinalizadores de parâmetro. Como mencionado anteriormente,
+            ainda há duas elipses possíveis para o caminho percorrer e dois caminhos possíveis diferentes em ambas as elipses, dando quatro caminhos possíveis.
+            O primeiro parâmetro é o sinalizador de arco grande. Determina se o arco deve ser maior ou menor que 180 graus; no final, esta bandeira determina em
+            qual direção o arco percorrerá em torno de um determinado círculo. O segundo parâmetro é a bandeira de varredura. Ele determina se o arco deve
+            começar a se mover em ângulos positivos ou negativos, o que essencialmente escolhe qual dos dois círculos será percorrido. O exemplo abaixo mostra
             todas as quatro combinações possíveis, junto com os dois círculos para cada caso.
         -->
         <svg width="325" height="325" xmlns="http://www.w3.org/2000/svg">
@@ -310,14 +310,14 @@
         </svg>
         <!-- Fills and Strokes -->
         <!--
-            Existem várias maneiras de colorir formas (incluindo a especificação de atributos no objeto) usando CSS embutido, uma seção CSS incorporada ou um 
-            arquivo CSS externo. A maioria dos SVG que você encontrará na web usa CSS embutido, mas há vantagens e desvantagens associadas a cada tipo. 
+            Existem várias maneiras de colorir formas (incluindo a especificação de atributos no objeto) usando CSS embutido, uma seção CSS incorporada ou um
+            arquivo CSS externo. A maioria dos SVG que você encontrará na web usa CSS embutido, mas há vantagens e desvantagens associadas a cada tipo.
         -->
         <!-- Fill and Stroke Attributes -->
         <!-- Painting
-           A coloração básica pode ser feita definindo dois atributos no nó: "fill" e "stroke". Usar "fill" define a cor dentro do objeto e o "stroke" 
-           define a cor da linha desenhada ao redor do objeto. Você pode usar os mesmos esquemas de nomenclatura de cores css que usa em HTML, sejam nomes de 
-           cores (ou seja, vermelho), valores rgb (ou seja, rgb (255,0,0)), valores hexadecimais, valores rgba, etc. 
+           A coloração básica pode ser feita definindo dois atributos no nó: "fill" e "stroke". Usar "fill" define a cor dentro do objeto e o "stroke"
+           define a cor da linha desenhada ao redor do objeto. Você pode usar os mesmos esquemas de nomenclatura de cores css que usa em HTML, sejam nomes de
+           cores (ou seja, vermelho), valores rgb (ou seja, rgb (255,0,0)), valores hexadecimais, valores rgba, etc.
         -->
         <svg>
             <rect x="10" y="10" width="100" height="100" stroke="blue" fill="purple"
@@ -338,7 +338,7 @@
             <line x1="40" x2="120" y1="100" y2="100" stroke="black" stroke-width="20" stroke-linecap="round" />
         </svg>
         <!--
-            A propriedade "stroke-width" define a largura desse traço. Os traços são desenhados centralizados ao redor do caminho. No exemplo acima, o caminho é 
+            A propriedade "stroke-width" define a largura desse traço. Os traços são desenhados centralizados ao redor do caminho. No exemplo acima, o caminho é
             mostrado em rosa e o traço em preto.
 
             O segundo atributo que afeta os traços é a propriedade "stroke-linecap", demonstrada acima. Isso controla a forma das extremidades das linhas.
@@ -349,7 +349,7 @@
                a metade do "stroke-width".
              - "round" produz um efeito arredondado no final do traço. O raio desta curva também é controlado pelo "stroke-width".
           
-            Use "stroke-linejoin" para controlar como a junta entre dois segmentos de linha é desenhada. 
+            Use "stroke-linejoin" para controlar como a junta entre dois segmentos de linha é desenhada.
         -->
         <svg width="160" height="280" xmlns="http://www.w3.org/2000/svg" version="1.1">
             <polyline points="40 60 80 20 120 60" stroke="black" stroke-width="20"
@@ -366,7 +366,7 @@
             possíveis para este atributo. "mitre" estende a linha ligeiramente além de sua largura normal para criar um canto quadrado onde apenas um ângulo é usado.
             "round" cria um segmento de linha arredondado. "bevel" cria um novo ângulo para auxiliar na transição entre os dois segmentos.
 
-            Por fim, você também pode usar tipos de linha tracejada em um traço, especificando o atributo "stroke-dasharray". 
+            Por fim, você também pode usar tipos de linha tracejada em um traço, especificando o atributo "stroke-dasharray".
         -->
         <svg width="200" height="150" xmlns="http://www.w3.org/2000/svg" version="1.1">
             <path d="M 10 75 Q 50 10 100 75 T 190 75" stroke="black"
@@ -375,19 +375,19 @@
                   stroke-linecap="round" stroke-width="1" stroke-dasharray="5,5" fill="none"/>
         </svg>
         <!--
-            O atributo stroke-dasharray usa uma série de números separados por vírgula como argumento. 
+            O atributo stroke-dasharray usa uma série de números separados por vírgula como argumento.
         -->
         <!--
-            Nota: Ao contrário dos elementos <path>, esses números devem ser separados por vírgulas (os espaços em branco são ignorados). 
+            Nota: Ao contrário dos elementos <path>, esses números devem ser separados por vírgulas (os espaços em branco são ignorados).
         -->
         <!--
-            O primeiro número especifica uma distância para a área preenchida e o segundo uma distância para a área não preenchida. Portanto, no exemplo acima, o segundo 
-            caminho preenche 5 unidades de pixel, com 5 unidades em branco até o próximo traço de 5 unidades. Você pode especificar mais números se desejar um padrão de 
-            traço mais complicado. O primeiro exemplo especifica três números, caso em que o renderizador faz um loop nos números duas vezes para criar um padrão par. 
-            Portanto, o primeiro caminho renderiza 5 preenchido, 10 vazio, 5 preenchido e, em seguida, retorna para criar 5 vazio, 10 preenchido e 5 vazio. O padrão então 
+            O primeiro número especifica uma distância para a área preenchida e o segundo uma distância para a área não preenchida. Portanto, no exemplo acima, o segundo
+            caminho preenche 5 unidades de pixel, com 5 unidades em branco até o próximo traço de 5 unidades. Você pode especificar mais números se desejar um padrão de
+            traço mais complicado. O primeiro exemplo especifica três números, caso em que o renderizador faz um loop nos números duas vezes para criar um padrão par.
+            Portanto, o primeiro caminho renderiza 5 preenchido, 10 vazio, 5 preenchido e, em seguida, retorna para criar 5 vazio, 10 preenchido e 5 vazio. O padrão então
             se repete.
 
-            Existem propriedades adicionais de "stroke" e "fill" disponíveis, incluindo "fill-rule", que especifica como colorir as formas que se sobrepõem; 
+            Existem propriedades adicionais de "stroke" e "fill" disponíveis, incluindo "fill-rule", que especifica como colorir as formas que se sobrepõem;
             "stroke-miterlimit", que determina se traço deve atrair mitras; e "stroke-dashoffset", que especifica onde iniciar um dasharray em uma linha.
         -->
     </main>
