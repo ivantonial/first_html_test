@@ -40,30 +40,36 @@
 
     var ctx = canvas.getContext('2d');
 
-    function Circle(x, y, dx, dy, radius){
+    function Circle(x, y, dx, dy, radius, xOr, yOr){
         this.x = x;
         this.y = y;
         this.dx = dx;
         this.dy = dy;
         this.radius = radius;
-        this.xOr = x;
-        this.yOr = y;
+        this.xOr = xOr;
+        this.yOr = yOr;
 
         this.draw = function() {
             ctx.beginPath();
             ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2, false);
-            ctx.strokeStyle = 'blue';
-            ctx.stroke();
-            if (this.xOr < innerWidth * .25 && this.yOr < innerHeight * .25){
+            if (this.xOr < .25 && this.yOr < .25){
+                ctx.strokeStyle = 'rgba(255,0,0, 1)';
+                ctx.stroke();
                 ctx.fillStyle = 'rgba(255,0,0, 0.2)'
                 ctx.fill();
-            } else if (this.xOr < innerWidth * .5 && this.yOr < innerHeight * .5){
+            } else if (this.xOr < .5 && this.yOr < .5){
+                ctx.strokeStyle = 'rgba(0,255,0, 1)';
+                ctx.stroke();
                 ctx.fillStyle = 'rgba(0,255,0, 0.2)'
                 ctx.fill();
-            } else if (this.xOr < innerWidth * .75 && this.yOr < innerHeight * .75){
+            } else if (this.xOr < .75 && this.yOr < .75){
+                ctx.strokeStyle = 'rgba(0,0,255, 1)';
+                ctx.stroke();
                 ctx.fillStyle = 'rgba(0,0,255, 0.2)'
                 ctx.fill();
             } else {
+                ctx.strokeStyle = 'rgba(255,0,255, 1)';
+                ctx.stroke();
                 ctx.fillStyle = 'rgba(255,0,255, 0.2)'
                 ctx.fill();
             }
@@ -87,14 +93,15 @@
 
     var circleArray = [];
 
-    for (var i =0; i < 200; i++){
-        var radius = (Math.random() + .4) * 25;
+    for (var i =0; i < 300; i++){
+        var radius = (Math.random() + .4) * 15;
         var x = Math.random() * (innerWidth - 75 - radius * 2) + radius;
         var y = Math.random() * (innerHeight - 125 - radius * 2) + radius;
         var dx = (Math.random() - 0.5) * 5;
         var dy = (Math.random() - 0.5) * 5;
-        circleArray.push(new Circle(x, y, dx, dy, radius));
-
+        var xOr = Math.random();
+        var yOr = Math.random();
+        circleArray.push(new Circle(x, y, dx, dy, radius, xOr, yOr));
     }
     
 
