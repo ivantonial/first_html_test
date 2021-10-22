@@ -4,16 +4,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Seletores</title>
+    <title>Elementos de caixas - ex 01</title>
     <!-- Open Graph -->
-    <meta property="og:title" content="Trilha Alpha EdTech seletores" />
-    <meta property="og:description" content="Exercícios da Alpha EdTech - seletores" />
+    <meta property="og:title" content="Trilha Alpha EdTech Elementos de caixas" />
+    <meta property="og:description" content="Exercícios da Alpha EdTech - Elementos de caixas - Ex 01" />
     <meta property="og:image" content="https://uploaddeimagens.com.br/images/003/489/369/full/pp.jfif?1634513477" />
     <meta property="og:image:height" content="438.9" />
     <meta property="og:image:width" content="auto" />
     <meta property="og:article:author" content="Ivan Tonial" />
     <!-- CSS -->
-    <link rel="stylesheet" href="/Pages/trilhaweb-modulo03-parte02-seletores.css">
+    <link rel="stylesheet" href="/Pages/trilhaweb-modulo03-parte04-elem-caixas-ex01.css">
     <style>
         #voltar {
             text-align: left; 
@@ -25,62 +25,60 @@
         <button><a href="/index.html">Voltar</a></button>
     </div>
     <h1>Counter-Strike</h1>
-    <div id="container">
-        <div id="fiel">
-            <h2>Índice</h2>
-            <ol class="indice">
-                <li><a href="#jogabilidade">Jogabilidade</a></li>
-                <ul>
-                    <li><a href="#principios-basicos">Princípios básicos</a></li>
-                    <li><a href="#controles-interface">Controles e interface</a></li>
-                    <li><a href="#mapas-modos">Mapas e modos de disputa</a></li>
-                    <li><a href="#personagens">Personagens</a></li>
-                    <li><a href="#equipamentos">Equipamentos</a></li>
-                </ul>
-                <li><a href="#desenvolvimento">Desenvolvimento</a></li>
-                <li><a href="#exito-influencia">Êxito e influência</a></li>
-                <li><a href="#brasil">No Brasil</a></li>
-                <li><a href="#cultura-jogo">Cultura do Jogo</a></li>
-                <ul>
-                    <li><a href="#trapacas">Trapaças (Cheats)</a></li>
-                    <li><a href="#linguagem">Linguagem</a></li>
-                    <li><a href="#sprays">Sprays</a></li>
-                </ul>
-                <li><a href="#proibicao">Proibição no Brasil</a></li>
-            </ol>
-        </div>
-        <div class="content content-style">
-            <h2>Introdução</h2>
-            <p>
-                Counter-Strike (também abreviado por CS) é um popular jogo eletrônico de tiro em primeira pessoa. Inicialmente 
-                criado como um "mod" de Half-Life para jogos online, foi desenvolvido por Minh Le e Jess Cliffe e depois adquirido 
-                pela Valve Corporation. Foi lançado em 1999, porém em 2000 ele começou a ser comercializado oficialmente, e posteriormente 
-                foram feitas versões para Xbox, Mac OS X e Linux. Atualmente o game é jogado na versão Counter-Strike: Global Offensive.
-            </p>
-            <p>
-                O jogo é baseado em rodadas nas quais equipes de contraterroristas e terroristas combatem-se até a eliminação completa de um 
-                dos times, e tem como objetivo principal plantar e desarmar bombas, ou sequestrar e salvar reféns.
-            </p>
-            <p>
-                Counter-Strike foi um dos responsáveis pela massificação dos jogos por rede no início do século, sendo considerado o grande 
-                responsável pela popularização das LAN houses no mundo. O jogo é considerado o originador do esporte eletrônico, onde muitos 
-                jogadores levam-no a sério e recebem salários fixos, existindo até times profissionais, e que são patrocinados por grandes 
-                empresas como a Intel e a NVIDIA. Pelo mundo existem as ligas profissionais onde o Counter-Strike está presente, como o caso da 
-                CPL (que encerrou suas atividades em 2008), ESWC, ESL, WCG e WEG. No caso da ESWC funciona da seguinte forma: cada 
-                país tem as suas qualificações no qual qualquer clã pode ir a uma qualificação em uma lan house em qualquer parte do mesmo país, 
-                passando depois às melhores equipes, as melhores equipes de cada país encontram-se depois no complexo da ESWC, localizado em Paris, 
-                para disputar o lugar da melhor equipe do mundo de Counter-Strike.
-            </p>
-            <p>
-                Considerado um dos maiores e mais influentes jogos de todos os tempos, Counter-Strike foi aclamado pela mídia especializada desde 
-                a época de seu lançamento, recebendo notas 88/100 no site Metacritic e 89/100 no site GameRankings, além de receber 98% de análises 
-                positivas no Steam.
-            </p>
-        </div>
+    <div class="indice">
+        <h2>Índice</h2>
+        <ol>
+            <li><a href="#jogabilidade">Jogabilidade</a></li>
+            <ul>
+                <li><a href="#principios-basicos">Princípios básicos</a></li>
+                <li><a href="#controles-interface">Controles e interface</a></li>
+                <li><a href="#mapas-modos">Mapas e modos de disputa</a></li>
+                <li><a href="#personagens">Personagens</a></li>
+                <li><a href="#equipamentos">Equipamentos</a></li>
+            </ul>
+            <li><a href="#desenvolvimento">Desenvolvimento</a></li>
+            <li><a href="#exito-influencia">Êxito e influência</a></li>
+            <li><a href="#brasil">No Brasil</a></li>
+            <li><a href="#cultura-jogo">Cultura do Jogo</a></li>
+            <ul>
+                <li><a href="#trapacas">Trapaças (Cheats)</a></li>
+                <li><a href="#linguagem">Linguagem</a></li>
+                <li><a href="#sprays">Sprays</a></li>
+            </ul>
+            <li><a href="#proibicao">Proibição no Brasil</a></li>
+        </ol>
     </div>
-    <div class="content content-style">
-    <h2 id="jogabilidade">Jogabilidade</h2>
-    <h3 id="principios-basicos">Principios básicos</h3>
+    <div class="introducao">
+        <h2>Introdução</h2>
+        <p>
+            Counter-Strike (também abreviado por CS) é um popular jogo eletrônico de tiro em primeira pessoa. Inicialmente 
+            criado como um "mod" de Half-Life para jogos online, foi desenvolvido por Minh Le e Jess Cliffe e depois adquirido 
+            pela Valve Corporation. Foi lançado em 1999, porém em 2000 ele começou a ser comercializado oficialmente, e posteriormente 
+            foram feitas versões para Xbox, Mac OS X e Linux. Atualmente o game é jogado na versão Counter-Strike: Global Offensive.
+        </p>
+        <p>
+            O jogo é baseado em rodadas nas quais equipes de contraterroristas e terroristas combatem-se até a eliminação completa de um 
+            dos times, e tem como objetivo principal plantar e desarmar bombas, ou sequestrar e salvar reféns.
+        </p>
+        <p>
+            Counter-Strike foi um dos responsáveis pela massificação dos jogos por rede no início do século, sendo considerado o grande 
+            responsável pela popularização das LAN houses no mundo. O jogo é considerado o originador do esporte eletrônico, onde muitos 
+            jogadores levam-no a sério e recebem salários fixos, existindo até times profissionais, e que são patrocinados por grandes 
+            empresas como a Intel e a NVIDIA. Pelo mundo existem as ligas profissionais onde o Counter-Strike está presente, como o caso da 
+            CPL (que encerrou suas atividades em 2008), ESWC, ESL, WCG e WEG. No caso da ESWC funciona da seguinte forma: cada 
+            país tem as suas qualificações no qual qualquer clã pode ir a uma qualificação em uma lan house em qualquer parte do mesmo país, 
+            passando depois às melhores equipes, as melhores equipes de cada país encontram-se depois no complexo da ESWC, localizado em Paris, 
+            para disputar o lugar da melhor equipe do mundo de Counter-Strike.
+        </p>
+        <p>
+            Considerado um dos maiores e mais influentes jogos de todos os tempos, Counter-Strike foi aclamado pela mídia especializada desde 
+            a época de seu lançamento, recebendo notas 88/100 no site Metacritic e 89/100 no site GameRankings, além de receber 98% de análises 
+            positivas no Steam.
+        </p>
+    </div>
+    <div class="jogabilidade">
+        <h2 id="jogabilidade">Jogabilidade</h2>
+        <h3 id="principios-basicos">Principios básicos</h3>
         <p>
             A ação de Counter-Strike se desenvolve em rodadas em uma duração definida pelo criador do server, nas quais a equipe terrorista (ou TR) 
             enfrenta a equipe contraterrorista (ou CT). A equipe vencedora é aquela que atende a todos os seus objetivos de vitória, de situação 
@@ -207,8 +205,7 @@
             cegar ou atrapalhar o oponente), coletes de segurança, óculos de visão noturna e kits difusores (utilizados para desarmar a bomba). Um jogador 
             pode carregar consigo uma pistola, um outro tipo de arma de grande porte e um número limitado de utilitários.
         </p>
-        <div class="lista-armas">
-        <h4 style="text-align: left; border-bottom: 1px dashed rgb(48, 48, 48); list-style-position: inside;">Armas corpo a corpo</h4>
+        <h4>Armas corpo a corpo</h4>
         <ul>
             <li>Faca</li>
         </ul>
@@ -264,9 +261,8 @@
             <li>Colete a prova de balas</li>
             <li>Visão noturna</li>
         </ul>
-        </div>
     </div>
-    <div class="content content-style">
+    <div class="desenv">
         <h2 id="desenvolvimento">Desenvolvimento</h2>
         <p>
             Após o lançamento de Quake II, apareceu um mod chamado Action Quake 2. Minh Le, conhecido sob o nome de Gooseman, trabalhava em uma 
@@ -304,7 +300,7 @@
             uma das maiores comunidades de jogadores do mundo de todas as nacionalidades.
         </p>
     </div>
-    <div class="content content-style">
+    <div class="exito">
         <h2 id="exito-influencia">Êxito e influência</h2>
         <p>
             Desde a saída de sua primeira beta em 1999, Counter-Strike tornou-se referência em jogos de tiro em primeira pessoa e ação. É ainda, 
@@ -343,8 +339,8 @@
             cartazes, etc. Counter-Strike também tem sido a inspiração para muitos filmes.
         </p>
     </div>
-    <div class="content content-style">
-        <h2 id="brasil">No Brasil</h2>
+    <div class="brasil">
+    <h2 id="brasil">No Brasil</h2>
         <p>
             Counter-Strike iniciou no Brasil por iniciativa de dois servidores de jogos, Elogica e Unigames. Inicialmente, o MOD do Half-Life pouco 
             conhecido, atraía poucos entusiastas que entravam nos servidores desses dois provedores e aguardavam a entrada de outros jogadores, 
@@ -352,7 +348,7 @@
             No Beta 5 do mod, já era o jogo online mais jogado no Brasil.
         </p>
     </div>
-    <div class="content content-style">
+    <div class="cultura">
         <h2 id="cultura-jogo">Cultura do Jogo</h2>
         <h3 id="trapacas">Trapaças (Cheats)</h3>
         <p>
@@ -451,7 +447,7 @@
             Counter-Strike 1.6 não existe método oficial para importar imagens. Deve se usar um programa especial como o HL TagConverter por exemplo.
         </p>
     </div>
-    <div class="content content-style">
+    <div class="proibicao">
         <h2 id="proibicao">Proibição no Brasil</h2>
         <p>
             Entre 18 de Janeiro de 2008 e 18 de Junho de 2009, a comercialização de livros, encartes, revistas ou CD-ROM, contendo o jogo Counter-Strike 
