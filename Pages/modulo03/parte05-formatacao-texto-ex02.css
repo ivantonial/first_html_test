@@ -11,19 +11,26 @@ body {
 }
 
 h1 {
-    margin-left: 12em;
+    text-align: center;
     font-family: cursive;
 }
 
 .versao {
-    margin-left: 33.4em;
+    text-align: center;
+    margin-left: 10em;
     font-family: cursive;
+    font-weight: bolder;
     text-decoration: underline rgba(128, 0, 0, 0.8);
     margin-bottom: 4px;
 }
 
+.versions-cs2 {
+    text-align: center;
+    margin-left: 8em;
+}
+
 .versions-cs {
+    display: inline-block;
     writing-mode: vertical-lr;
-    margin-left: 32em;
     font-family: cursive;
 }
