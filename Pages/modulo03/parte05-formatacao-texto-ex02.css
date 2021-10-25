@@ -1,0 +1,29 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin-left: 10em;
+    margin-right: 10em;
+    background-color: lightgoldenrodyellow;
+}
+
+h1 {
+    margin-left: 12em;
+    font-family: cursive;
+}
+
+.versao {
+    margin-left: 33.4em;
+    font-family: cursive;
+    text-decoration: underline rgba(128, 0, 0, 0.8);
+    margin-bottom: 4px;
+}
+
+.versions-cs {
+    writing-mode: vertical-lr;
+    margin-left: 32em;
+    font-family: cursive;
+}
