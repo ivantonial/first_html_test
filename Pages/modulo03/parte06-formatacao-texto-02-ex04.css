@@ -151,7 +151,7 @@ h1 {
 
 .indice > h2 {
     font-family: 'Cookie', cursive;
-    font-size: 18px;
+    font-size: 26px;
     background-image: linear-gradient(145deg, rgba(255, 0, 0, .2) 30%, rgba(252, 217, 102, 0.5) 96%);
     text-align: center;
     align-items: center;
@@ -210,7 +210,7 @@ h1 {
 
 .jogabilidade > h2, .introducao > h2, .desenv > h2, .exito > h2, .brasil > h2, .cultura > h2, .proibicao > h2 {
     font-family: 'Cookie', cursive;
-    font-size: 18px;
+    font-size: 26px;
     background-image: linear-gradient(145deg, rgba(255, 0, 0, .2) 30%, rgba(252, 217, 102, 0.5) 96%);
     text-align: center;
     align-items: center;
@@ -227,7 +227,7 @@ h1 {
 
 .jogabilidade > h3, .desenv > h3, .cultura > h3 {
     font-family: 'Cookie', cursive;
-    font-size: 14px;
+    font-size: 22px;
     background-image: linear-gradient(145deg, rgba(50, 202, 139, 0.2) 30%, rgba(51, 102, 122, 0.5) 96%);
     text-align: center;
     align-items: center;
@@ -249,6 +249,8 @@ h1 {
 }
 
 .armas-col01 {
+    font-family: 'Merienda', cursive;
+    font-size: 14px;
     display: inline-block;
     align-items: center;
     text-align: left;
@@ -256,6 +258,8 @@ h1 {
 }
 
 .armas-col02 {
+    font-family: 'Merienda', cursive;
+    font-size: 14px;
     display: inline-block;
     align-items: center;
     text-align: left;
