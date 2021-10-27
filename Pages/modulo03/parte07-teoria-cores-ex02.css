@@ -45,7 +45,9 @@ h3 {
     margin-top: 0rem;
     margin-bottom: .2rem;
     max-width: fit-content;
-    text-decoration: underline black;
+    text-decoration: 2px double underline rgb(223, 152, 0);
+    border-top-left-radius: 30%;
+    border-top-right-radius: 30%;
 }
 
 button {
@@ -75,6 +77,19 @@ button {
     color: rgb(212, 240, 205);
 }
 
+.paragrafo {
+    background-color: rgb(230, 198, 132);
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    max-width: 60rem;
+    border-color: rgb(223, 152, 0);
+    border-style: dotted;
+    border-width: 1.5px;
+    
+}
+
 .hexadecimais, .rgb-rgba, .hsl-hsla, .pre-browser-atual{
     text-align: center;
 }
@@ -88,7 +103,7 @@ button {
     display: inline-block;
     padding: 10rem 15rem;
     width: 10rem;
-    border: black;
+    border-color: black;
     border-style: double;
     border-top-width: 8px;
     border-right-width: 4px;
@@ -105,7 +120,7 @@ button {
     display: inline-block;
     padding: 10rem 15rem;
     width: 10rem;
-    border: black;
+    border-color: black;
     border-style: double;
     border-top-width: 8px;
     border-right-width: 4px;
@@ -122,7 +137,7 @@ button {
     display: inline-block;
     padding: 10rem 15rem;
     width: 10rem;
-    border: black;
+    border-color: black;
     border-style: double;
     border-top-width: 8px;
     border-right-width: 4px;
@@ -139,7 +154,7 @@ button {
     display: inline-block;
     padding: 10rem 15rem;
     width: 10rem;
-    border: black;
+    border-color: black;
     border-style: double;
     border-top-width: 8px;
     border-right-width: 4px;
@@ -156,7 +171,7 @@ button {
     display: inline-block;
     padding: 10rem 15rem;
     width: 10rem;
-    border: black;
+    border-color: black;
     border-style: double;
     border-top-width: 8px;
     border-right-width: 4px;
@@ -173,7 +188,7 @@ button {
     display: inline-block;
     padding: 10rem 15rem;
     width: 10rem;
-    border: black;
+    border-color: black;
     border-style: double;
     border-top-width: 8px;
     border-right-width: 4px;
@@ -190,7 +205,7 @@ button {
     display: inline-block;
     padding: 10rem 15rem;
     width: 10rem;
-    border: black;
+    border-color: black;
     border-style: double;
     border-top-width: 8px;
     border-right-width: 4px;
@@ -209,6 +224,7 @@ button {
     width: 10rem;;
     color: rgba(138, 0, 138, 0.76);
     border: currentColor;
+    border-color:black;
     border-style: double;
     border-top-width: 8px;
     border-right-width: 4px;
