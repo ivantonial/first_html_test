@@ -223,8 +223,7 @@ button {
     padding: 10rem 15rem;
     width: 10rem;;
     color: rgba(138, 0, 138, 0.76);
-    border: currentColor;
-    border-color:black;
+    border-color: currentColor;
     border-style: double;
     border-top-width: 8px;
     border-right-width: 4px;
