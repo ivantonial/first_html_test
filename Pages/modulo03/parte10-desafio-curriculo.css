@@ -1,0 +1,108 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Merienda', cursive;
+}
+
+h1 {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    margin-top: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+h2 {
+    display: flex;
+    text-decoration: double underline 1px rgba(180, 19, 19, 0.671);
+    text-align: center;
+    justify-content: flex-start;
+    margin-left: 6rem;
+    margin-top: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+header {
+    border-bottom-color: rgba(180, 19, 19, 0.671);
+    border-bottom-width: .1rem;
+    border-bottom-style: dashed;
+}
+
+.photo {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    margin-left: 13rem;
+    margin-top: 3rem;
+}
+
+.header-formations, .header-status-address {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+
+.catchphrase {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    margin-bottom: 4rem;
+}
+
+.photo-eu {
+    display: flex;
+    max-width: 50%;
+    border-radius: 100%;
+    border-style: dashed;
+    border-width: .3rem;
+    border-color: rgba(184, 145, 37, 0.75);
+    box-shadow: 0 0 5rem 1rem rgba(184, 144, 37, 0.4);
+}
+
+.title {
+    margin-bottom: 3rem;
+}
+
+.celphone, .email, .github, .linkedin {
+    display: flex;
+    flex-shrink: 0;
+}
+
+.header-social {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.sectiontitle {
+    display: flex;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+
+svg {
+    margin-top: .35rem;
+}
+
+ul > li {
+    display: flex;
+    padding-left: 2.8rem;
+    background-image:url(/svg/IvanRamalhoTonial2.png);
+    background-position: left;
+    background-size: 1.5rem 1.5rem;
+    background-repeat: no-repeat;
+    list-style-type: none;
+    justify-content: flex-start;
+    text-align: left;
+}
+
+li {
+    display: flex;
+    margin: .2rem 0;
+    justify-content: flex-start;
+    margin-left: 8rem;
+    margin-right: 8rem;
+    flex-shrink: 0;
+}
