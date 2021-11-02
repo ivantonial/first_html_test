@@ -12,7 +12,7 @@
     --font-l: clamp(1rem, 6vw + 0.1rem, 2rem);
     --font-mdl: clamp(.75rem, 5vw + 0.1rem, 1.5rem);
     --font-md: clamp(.5rem, 4vw + 0.1rem, 1rem);
-}
+} 
 
 #objetivo, #resumo, #formacao, #experiencia, #habilidades, #cursos {
     min-height: 100vh;
@@ -20,15 +20,15 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    flex-shrink: 2;
 }
 
 body {
     width: 100%;
     min-height: 100vh;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+    justify-content: left;
+    align-items: center; 
 }
 
 .container h1 {
@@ -170,10 +170,6 @@ main {
     margin-top: 3rem;
 }
 
-.title {
-    margin-bottom: 3rem;
-}
-
 .celphone, .email, .github, .linkedin {
     display: flex;
     flex-shrink: 0;
@@ -181,9 +177,8 @@ main {
 
 .header-social {
     display: flex;
-    text-align: center;
     align-items: center;
-    justify-content: center;
+    justify-content: space-evenly;
 }
 
 .sectiontitle {
