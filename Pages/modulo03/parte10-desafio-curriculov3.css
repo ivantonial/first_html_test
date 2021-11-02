@@ -172,7 +172,7 @@ main {
 
 .celphone, .email, .github, .linkedin {
     display: flex;
-    flex-shrink: 0;
+    flex-shrink: 1;
 }
 
 .header-social {
