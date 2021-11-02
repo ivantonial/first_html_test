@@ -178,7 +178,7 @@ main {
 .header-social {
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: center;
 }
 
 .sectiontitle {
@@ -190,7 +190,7 @@ main {
 }
 
 svg {
-    margin-top: 0.17rem;
+    margin-top: 0.30rem;
 }
 
 .alinhamento {
