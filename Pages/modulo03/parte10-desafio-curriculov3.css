@@ -14,10 +14,19 @@
     --font-md: clamp(.5rem, 4vw + 0.1rem, 1rem);
 } 
 
-#objetivo, #resumo, #formacao, #experiencia, #habilidades, #cursos, #abertura {
+#objetivo, #resumo, #formacao, #experiencia, #habilidades, #cursos {
     min-height: 100vh;
     display: flex;
     justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-shrink: 2;
+}
+
+#abertura {
+    min-height: 100vh;
+    display: flex;
+    justify-content: space-between;
     align-items: center;
     flex-direction: column;
     flex-shrink: 2;
