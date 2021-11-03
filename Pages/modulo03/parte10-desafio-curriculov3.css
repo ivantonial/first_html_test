@@ -203,12 +203,6 @@ main {
     align-items: center;
 }
 
-.obj {
-    display: flex;
-    justify-content: center;
-    text-align: center;
-}
-
 svg {
     margin-top: 0.30rem;
 }
@@ -234,7 +228,7 @@ li::before {
     display: flex;
     content: "\2756";
     padding-right: .5rem;
-    padding-left: 4rem;
+    padding-left: 15vw;
     color: rgba(180, 19, 19, 0.671);
     flex-shrink: 0;
     justify-content: center;
@@ -275,21 +269,6 @@ li::before {
     display: flex;
     margin-bottom: 1rem;
     flex-shrink: 1;
-}
-
-.descrip {
-    display: flex;
-    justify-content: center;
-    max-width: 60vw;
-}
-
-.descrip > ul {
-    max-width: 35vw;
-}
-
-ul > li{
-    margin-top: .5rem;
-    margin-bottom: .5rem;
 }
 
 .exp-extra {
