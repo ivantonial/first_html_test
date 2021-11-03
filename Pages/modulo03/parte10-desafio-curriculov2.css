@@ -211,11 +211,29 @@ li {
 }
 
 li::before {
+    display: flex;
     content: "\2756";
     padding-right: .5rem;
     padding-left: 4rem;
     color: rgba(180, 19, 19, 0.671);
     flex-shrink: 0;
+    justify-content: left;
+    align-self: flex-start;
+}
+
+.descrip {
+    display: flex;
+    justify-content: center;
+    max-width: 60vw;
+}
+
+.descrip > ul {
+    max-width: 35vw;
+}
+
+ul > li{
+    margin-top: .5rem;
+    margin-bottom: .5rem;
 }
 
 .prog > h3, .soft > h3, .idioma > h3 {
