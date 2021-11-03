@@ -203,6 +203,12 @@ main {
     align-items: center;
 }
 
+.obj {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
 svg {
     margin-top: 0.30rem;
 }
@@ -219,8 +225,8 @@ ul {
 
 li {
     display: flex;
-    padding-right: 4rem;
-    justify-content: center;
+    padding-right: 15vw;
+    justify-content: left;
     align-items: center;
 }
 

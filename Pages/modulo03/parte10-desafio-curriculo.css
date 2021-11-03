@@ -174,22 +174,22 @@ ul {
 
 li {
     display: flex;
-    padding-right: 4rem;
-    justify-content: center;
+    padding-right: 15vw;
+    justify-content: left;
 }
 
 li::before {
     display: flex;
     content: "\2756";
-    padding-right: .5rem;
-    padding-left: 4rem;
+    padding-right: .15vw;
+    padding-left: 15vw;
     color: rgba(180, 19, 19, 0.671);
     flex-shrink: 0;
     justify-content: center;
     align-self: flex-start;
 }
 
-.descrip {
+/* .descrip {
     display: flex;
     justify-content: center;
     max-width: 60vw;
@@ -197,7 +197,7 @@ li::before {
 
 .descrip > ul {
     max-width: 40vw;
-}
+} */
 
 ul > li{
     margin-top: .5rem;
