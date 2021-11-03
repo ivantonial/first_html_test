@@ -5,12 +5,22 @@
     font-family: 'Merienda', cursive;
 }
 
+:root {
+    /* clamp(min, ideal, max) */
+    --font-xxl: clamp(2rem, 8vw + 0.1rem, 3rem);
+    --font-xl: clamp(1.5rem, 6vw + 0.1rem, 2.5rem);
+    --font-l: clamp(1rem, 5vw + 0.1rem, 1.75rem);
+    --font-mdl: clamp(.75rem, 4vw + 0.1rem, 1.25rem);
+    --font-md: clamp(.5rem, 3.5vw + 0.1rem, .85rem);
+} 
+
 h1 {
     display: flex;
     text-align: center;
     justify-content: center;
     margin-top: 1.2rem;
     margin-bottom: 2rem;
+    font-size: var(--font-xxl);
 }
 
 h2 {
@@ -21,6 +31,7 @@ h2 {
     border-top-style: dashed;
     border-top-width: 1px;
     border-top-color: rgba(180, 19, 19, 0.671);
+    font-size: var(--font-xl);
 }
 
 h3 {
@@ -29,14 +40,40 @@ h3 {
     margin-left: 3rem;
     margin-bottom: 1rem;
     margin-top: 2rem;
+    font-size: var(--font-l);
 }
 
+h4 {
+    display: flex;
+    text-decoration: solid underline 1px rgba(180, 19, 19, 0.671);
+    margin-left: 3rem;
+    margin-bottom: .125rem;
+    margin-top: .5rem;
+    font-size: var(--font-ml);
+}
 
+p {
+    font-size: var(--font-md);
+}
+
+.curso-extra {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    padding-left: 12vw;
+    padding-right: 12vw;
+}
+
+.descrip-cursos {
+    padding-right: 15vw;
+}
 
 .all-studies, .experiences {
     display: flex;
     justify-content: space-evenly;
     flex-direction: column;
+    padding-left: 12vw;
+    padding-right: 12vw;
 }
 
 .course-desc {
@@ -58,18 +95,23 @@ h3 {
     text-align: right;
 }
 
-h4 {
-    display: flex;
-    text-decoration: solid underline 1px rgba(180, 19, 19, 0.671);
-    margin-left: 3rem;
-    margin-bottom: .125rem;
-    margin-top: .5rem;
-}
-
 .emp, .sobre {
     border-bottom-style: dashed;
     border-bottom-width: .10rem;
     border-bottom-color: rgba(0, 0, 0, 0.3);
+}
+
+.sobre > .descrip {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    padding-left: 12vw;
+    padding-right: 12vw;
+}
+
+.objetivo > li {
+    justify-content: center;
+    margin-left: -12vw;
 }
 
 .work {
@@ -79,6 +121,10 @@ h4 {
     flex-direction: row;
     /* border-bottom-style: dashed;
     border-bottom-width: .10rem; */
+}
+
+.resumo > li, .emp > .descrip > ul > li {
+    padding-right: 14vw;
 }
 
 .dates {
@@ -174,7 +220,7 @@ ul {
 
 li {
     display: flex;
-    padding-right: 15vw;
+    /* padding-right: 15vw; */
     justify-content: left;
 }
 
