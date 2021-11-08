@@ -12,13 +12,16 @@ font-family: 'Rubik', sans-serif; */
 body {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 header {
     display: flex;
     flex-direction: column;
     width: 100%;
-    position: fixed;
+    position: sticky;
+    top: 0;
 }
 
 .header01 {
