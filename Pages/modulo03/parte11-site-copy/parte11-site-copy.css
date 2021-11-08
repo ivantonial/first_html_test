@@ -731,6 +731,10 @@ header {
     background-color: rgba(221, 221, 221, 0.378);
 }
 
+footer{
+    width: 100%;
+}
+
 .spacesFig {
     display: flex;
     flex-direction: row;
@@ -742,14 +746,16 @@ header {
     background-color: rgba(221, 221, 221, 0.378);
 }
 
+
+
 .menuFooter {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
     height: 300px;
-    margin-left: 3vw;
-    margin-right: 3vw;
+    margin-left: 2vw;
+    margin-right: 2vw;
     background-color: rgb(206, 100, 0);
 }
 
