@@ -359,3 +359,16 @@ font-family: 'Raleway', sans-serif;
     font-size: 0.781vw;
     color: rgb(0,7,105);;
 }
+
+button:hover{
+    background-color: rgba(64, 73, 206, 0.4);
+}
+
+button:hover a{
+    background-color: none;
+    color: white;
+}
+
+button a:hover{
+    color: white;
+}
