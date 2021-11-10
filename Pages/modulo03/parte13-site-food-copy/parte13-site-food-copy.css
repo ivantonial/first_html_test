@@ -307,9 +307,9 @@ nav a svg {
 
 .ulSocial {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
-    max-width: 100px;
+    max-width: 150px;
 }
 
 .social ul li {
@@ -327,7 +327,7 @@ nav a svg {
 
 .col p {
     margin-top: 35px;
-    margin-bottom: 35px
+    margin-bottom: 35px;
 }
 
 .row2 {
@@ -406,6 +406,10 @@ button:hover {
  .col p {
     font-family: "Helvetica-W01-Roman";
     font-size: 15px;
+ }
+
+ .aSocial{
+    padding-left: 20px;
  }
 
 .navButtons ul li a {
