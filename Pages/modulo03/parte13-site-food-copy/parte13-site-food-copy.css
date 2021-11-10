@@ -45,6 +45,10 @@ header {
     width: 100%;
 }
 
+.spacesHeader {
+    margin: 0 29vw 0 29vw;
+}
+
 .spacesHeader nav ul {
     display: flex;
     list-style: none;
