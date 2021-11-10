@@ -114,7 +114,6 @@ header {
 .sobreBrig {
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
     justify-content: center;
     min-height: 465px;
     min-width: 750px;
@@ -124,11 +123,10 @@ header {
 .escrita {
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
     align-items: center;
     min-height: 455px;
     min-width: 750px;
-    width: 100vw;
+    width: 99.1vw;
 }
 
 .chocolate {
@@ -223,7 +221,7 @@ header {
     align-items: center;
     background-color: rgb(112,186,190); 
     background-image: url(https://static.wixstatic.com/media/3978993e99184d5e8c21f0204cd07bca.png/v1/crop/x_0,y_0,w_150,h_150,q_85/3978993e99184d5e8c21f0204cd07bca.webp);
-    width: 100vw;
+    width: 99.1vw;
     min-height: 650px;
 }
 
@@ -231,7 +229,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 100vw;
+    width: 99.1vw;
 }
 
 .conheca2 {
