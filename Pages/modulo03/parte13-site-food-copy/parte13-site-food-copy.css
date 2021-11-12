@@ -45,10 +45,6 @@ header {
     width: 100%;
 }
 
-.spacesHeader {
-    margin: 0 29vw 0 29vw;
-}
-
 .spacesHeader nav ul {
     display: flex;
     list-style: none;
@@ -56,7 +52,8 @@ header {
     align-items: center;
     width: 100%;
     height: 50px;
-    min-width: 750px;
+    margin: 0 auto;
+    width: 60%;
 }
 
 .spacesHeader nav ul li a {
