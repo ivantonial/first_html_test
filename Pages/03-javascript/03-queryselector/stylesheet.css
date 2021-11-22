@@ -114,8 +114,9 @@ footer a {
 }
 
 .tooBig {
-    margin-top: -50px;
+    margin-top: -2vw;
     max-width: 800px;
+    width: 80vw;
 }
 
 /* slide */
