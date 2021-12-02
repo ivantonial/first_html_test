@@ -8,7 +8,7 @@ function check(val) {
     if (victoryFinal == 0) {
         let vic;
         if (count % 2 == 0 && document.getElementById("x" + val).textContent === "") {
-            document.getElementById("x" + val).innerHTML = "X";
+            document.getElementById("x" + val).innerHTML = "O";
             for (let i = 0; i < 3; i++) {
                 for (let j = 0; j < 3; j++) {
                     const x = (i + 1).toString() + (j + 1);
@@ -16,7 +16,7 @@ function check(val) {
                         game[i][j] = 1;
                         vic = verify(1);
                         if (vic == 1) {
-                            document.getElementById("winner").innerHTML = 'O player "X" ganhou!!';
+                            document.getElementById("winner").innerHTML = 'O player "O" ganhou!!';
                             victoryFinal = 1;
                         }
                     }
@@ -25,7 +25,7 @@ function check(val) {
             count++;
         }
         else if (count % 2 != 0 && document.getElementById("x" + val).textContent === "") {
-            document.getElementById("x" + val).innerHTML = "O";
+            document.getElementById("x" + val).innerHTML = "X";
             for (let i = 0; i < 3; i++) {
                 for (let j = 0; j < 3; j++) {
                     const x = (i + 1).toString() + (j + 1);
@@ -33,7 +33,7 @@ function check(val) {
                         game[i][j] = 2;
                         vic = verify(2);
                         if (vic == 1) {
-                            document.getElementById("winner").innerHTML = 'O player "O" ganhou!!';
+                            document.getElementById("winner").innerHTML = 'O player "X" ganhou!!';
                             victoryFinal = 1;
                         }
                     }
