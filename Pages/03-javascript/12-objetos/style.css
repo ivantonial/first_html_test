@@ -81,4 +81,5 @@ header{
 
 .cars {
     margin-bottom: 20px;
+    visibility: hidden;
 }

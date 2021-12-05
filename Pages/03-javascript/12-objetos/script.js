@@ -70,6 +70,7 @@ function raceResult() {
     document.getElementById("pedro").innerText = "Carro do Pedro:\nVel. Max: " + speedCarPedro.maxSpeed.toFixed(2) + "\nVel. Mín.: " + speedCarPedro.minSpeed.toFixed(2) + "\nDer. Máx.: " + speedCarPedro.maxSkid.toFixed(6) + "\nDer. Mín.: " + speedCarPedro.minSkid.toFixed(6) + "\nTipo: " + speedCarPedro.Type;
     document.getElementById("juca").innerText = "Carro do Juca:\nVel. Max: " + speedCarJuca.maxSpeed.toFixed(2) + "\nVel. Mín.: " + speedCarJuca.minSpeed.toFixed(2) + "\nDer. Máx.: " + speedCarJuca.maxSkid.toFixed(6) + "\nDer. Mín.: " + speedCarJuca.minSkid.toFixed(6) + "\nTipo: " + speedCarJuca.Type;
     document.getElementById("edna").innerText = "Carro do Edna:\nVel. Max: " + speedCarEdna.maxSpeed.toFixed(2) + "\nVel. Mín.: " + speedCarEdna.minSpeed.toFixed(2) + "\nDer. Máx.: " + speedCarEdna.maxSkid.toFixed(6) + "\nDer. Mín.: " + speedCarEdna.minSkid.toFixed(6) + "\nTipo: " + speedCarEdna.Type;
+    document.querySelector(".cars").style.visibility = "visible";
 }
 
 
