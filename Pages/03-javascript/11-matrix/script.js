@@ -2,8 +2,6 @@ const game = [[false, false, false], [false, false, false], [false, false, false
 let count = 0;
 let victoryFinal = 0;
 
-
-
 function check(val) {
     if (victoryFinal == 0) {
         let vic;
