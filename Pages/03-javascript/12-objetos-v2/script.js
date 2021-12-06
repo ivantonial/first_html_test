@@ -1,20 +1,6 @@
-const allCars = {
-    "popular": {
-        "vel_max": { "min": "180", "max": "200"},
-        "vel_min": { "min": "110", "max": "130"},
-        "derrapagem": { "min": "0.03", "max": "0.04"}
-    },
-    "sport": {
-        "velocidade_maxima": { "min": "195", "max": "215"},
-        "velocidade_minima": { "min": "125", "max": "145"},
-        "derrapagem": { "min": "0.02", "max": "0.03"}
-    },
-    "supersport": {
-        "velocidade_maxima": { "min": "210", "max": "230"},
-        "velocidade_minima": { "min": "140", "max": "160"},
-        "derrapagem": { "min": "0.01", "max": "0.0175"}
-    },
-}
+// const carOne = [150, 230, 0.03, "Pedro"];
+// const carTwo = [120, 260, 0.05, "Juca"];
+// const carThree = [180, 220, 0.01, "Edna"];
 
 function raceResult() {
     // Receive numbers of laps
@@ -96,23 +82,23 @@ function speedCar(max, min, minSkid, maxSkid) {
     return finalSpeed - (finalSpeed * finalSkid);
 }
 // min max derrapagem tipo e nome
-function randomCar(carType, name) {
+function randomCar(carType, name){
     const myCar = new Object();
-    if (carType < 0.6) {
-        myCar.minSpeed = Math.random() * (allCars.popular.vel_min.max - allCars.popular.vel_min.min) + allCars.popular.vel_min.min;
-        myCar.maxSpeed = Math.random() * (allCars.popular.vel_max.max - allCars.popular.vel_max.min) + allCars.popular.vel_max.min;
-        let skid1 = Math.random() * (allCars.popular.derrapagem.max - allCars.popular.derrapagem.min) + allCars.popular.derrapagem.min;
-        let skid2 = Math.random() * (allCars.popular.derrapagem.max - allCars.popular.derrapagem.min) + allCars.popular.derrapagem.min;
+    if (carType < 0.6){
+        myCar.minSpeed = Math.random() * (130 - 110) + 110;
+        myCar.maxSpeed = Math.random() * (200 - 180) + 180;
+        let skid1 = Math.random() * (0.04 - 0.03) + 0.03;
+        let skid2 = Math.random() * (0.04 - 0.03) + 0.03;
         myCar.minSkid = Math.min(skid1, skid2);
         myCar.maxSkid = Math.max(skid1, skid2);
         myCar.Type = "Popular"
         myCar.Owner = name;
     }
-    else if (carType < 0.95) {
-        myCar.minSpeed = Math.random() * (allCars.sport.vel_min.max - allCars.sport.vel_min.min) + allCars.sport.vel_min.min;
-        myCar.maxSpeed = Math.random() * (allCars.sport.vel_max.max - allCars.sport.vel_max.min) + allCars.sport.vel_max.min;
-        let skid1 = Math.random() * (allCars.sport.derrapagem.max - allCars.sport.derrapagem.min) + allCars.sport.derrapagem.min;
-        let skid2 = Math.random() * (allCars.sport.derrapagem.max - allCars.sport.derrapagem.min) + allCars.sport.derrapagem.min;
+    else if (carType < 0.95){
+        myCar.minSpeed = Math.random() * (145 - 125) + 125;
+        myCar.maxSpeed = Math.random() * (215 - 195) + 195;
+        let skid1 = Math.random() * (0.03 - 0.02) + 0.02;
+        let skid2 = Math.random() * (0.03 - 0.02) + 0.02;
         myCar.minSkid = Math.min(skid1, skid2);
         myCar.maxSkid = Math.max(skid1, skid2);
         myCar.Type = "Sport"
@@ -120,10 +106,10 @@ function randomCar(carType, name) {
 
     }
     else {
-        myCar.minSpeed = (allCars.supersport.vel_min.max - allCars.supersport.vel_min.min) + allCars.supersport.vel_min.min;
-        myCar.maxSpeed = Math.random() * (allCars.supersport.vel_max.max - allCars.supersport.vel_max.min) + allCars.supersport.vel_max.min;
-        let skid1 = Math.random() * (allCars.supersport.derrapagem.max - allCars.supersport.derrapagem.min) + allCars.supersport.derrapagem.min;
-        let skid2 = Math.random() * (allCars.supersport.derrapagem.max - allCars.supersport.derrapagem.min) + allCars.supersport.derrapagem.min;
+        myCar.minSpeed = Math.random() * (160 - 140) + 140;
+        myCar.maxSpeed = Math.random() * (230 - 210) + 210;
+        let skid1 = Math.random() * (0.0175 - 0.01) + 0.01;
+        let skid2 = Math.random() * (0.0175 - 0.01) + 0.01;
         myCar.minSkid = Math.min(skid1, skid2);
         myCar.maxSkid = Math.max(skid1, skid2);
         myCar.Type = "Super Sport"
