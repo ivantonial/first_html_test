@@ -1,18 +1,45 @@
 const allCars = {
     "popular": {
-        "vel_max": { "min": "180", "max": "200"},
-        "vel_min": { "min": "110", "max": "130"},
-        "derrapagem": { "min": "0.03", "max": "0.04"}
+        "vel_max": { 
+            "min": "180", 
+            "max": "200"
+        },
+        "vel_min": { 
+            "min": "110", 
+            "max": "130"
+        },
+        "derrapagem": { 
+            "min": "0.03", 
+            "max": "0.04"
+        }
     },
     "sport": {
-        "velocidade_maxima": { "min": "195", "max": "215"},
-        "velocidade_minima": { "min": "125", "max": "145"},
-        "derrapagem": { "min": "0.02", "max": "0.03"}
+        "velocidade_maxima": { 
+            "min": "195", 
+            "max": "215"
+        },
+        "velocidade_minima": { 
+            "min": "125", "max": 
+            "145"
+        },
+        "derrapagem": { 
+            "min": "0.02", 
+            "max": "0.03"
+        }
     },
     "supersport": {
-        "velocidade_maxima": { "min": "210", "max": "230"},
-        "velocidade_minima": { "min": "140", "max": "160"},
-        "derrapagem": { "min": "0.01", "max": "0.0175"}
+        "velocidade_maxima": { 
+            "min": "210", 
+            "max": "230"
+        },
+        "velocidade_minima": { 
+            "min": "140", 
+            "max": "160"
+        },
+        "derrapagem": { 
+            "min": "0.01", 
+            "max": "0.0175"
+        }
     },
 }
 
