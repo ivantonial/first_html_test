@@ -170,7 +170,7 @@ function raceResult() {
     document.getElementById("resultLaps").innerHTML = "A corrida teve: " + totalLaps + " voltas.";
     document.getElementById("resultWinner").innerHTML = "O vencedor foi " + first[1] + " , sendo mais rápido em " + first[0] + " voltas.";
     document.getElementById("resultSecond").innerHTML = "O segundo lugar foi " + second[1] + " , sendo mais rápido em " + second[0] + " voltas.";
-    document.getElementById("resultThird").innerHTML = "O terceiro lugar foi " + third[1] + " , sendo maiterceiro lugar em " + third[0] + " voltas.";
+    document.getElementById("resultThird").innerHTML = "O terceiro lugar foi " + third[1] + " , sendo mais rápido em " + third[0] + " voltas.";
     document.getElementById("playersFinalStatus").innerText = "Carro depois de melhorar de acordo com os levels dos players";
     document.getElementById("pedro").innerText = "Carro do Pedro:\nVel. Max: " + speedCarPedro.maxSpeed.toFixed(2) + " km/h\nVel. Mín.: " + speedCarPedro.minSpeed.toFixed(2) + " km/h\nDer. Máx.: " + speedCarPedro.maxSkid.toFixed(6) + "\nDer. Mín.: " + speedCarPedro.minSkid.toFixed(6) + "\nTipo: " + speedCarPedro.Type + "\nLVL: " + playersStats[0].lvl + "\nXP: " + playersStats[0].xp;
     document.getElementById("juca").innerText = "Carro do Juca:\nVel. Max: " + speedCarJuca.maxSpeed.toFixed(2) + " km/h\nVel. Mín.: " + speedCarJuca.minSpeed.toFixed(2) + " km/h\nDer. Máx.: " + speedCarJuca.maxSkid.toFixed(6) + "\nDer. Mín.: " + speedCarJuca.minSkid.toFixed(6) + "\nTipo: " + speedCarJuca.Type + "\nLVL: " + playersStats[1].lvl + "\nXP: " + playersStats[1].xp;
