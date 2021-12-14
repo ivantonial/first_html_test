@@ -27,7 +27,7 @@ function AddNewPurchase () {
     document.getElementById('tr' + trCount).appendChild(td);
     td = document.createElement('td');
     td.className = 'tdRegister';
-    td.innerHTML = dataClient.dueDate;
+    td.innerHTML = dataClient.dueDate.split('-').reverse().join('/');
     document.getElementById('tr' + trCount).appendChild(td);
     td = document.createElement('td');
     td.className = 'tdRegister';
