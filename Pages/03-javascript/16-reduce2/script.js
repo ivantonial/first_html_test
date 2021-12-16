@@ -1,5 +1,5 @@
 const clientData = [];
-const keyLog = [];
+let objectKey;
 let trCount = 0;
 let realBR = Intl.NumberFormat("pt-BR", {
     style: "currency",
@@ -54,7 +54,6 @@ function feesCalculator() {
         let tax;
         if (diffDate > 0) {
             tax = element.purchaseAmount * 0.02 + (element.purchaseAmount * diffDate * 0.001);
-            console.log(tax);
         }
         else {
             tax = 0;
@@ -86,61 +85,63 @@ function diffDateCalculate(dataClient) {
     }
 }
 
-
-function agruparPor(objetoArray, propriedade) {
-    return objetoArray.reduce((acc, obj) => {
-        let key = obj[propriedade].replaceAll(" ", "");
-        if (!acc[key]) {
-            acc[key] = [];
-            // keyLog.push(key);
+function order(orderBy) {
+    feesCalculator();
+    objectKey = orderBy;
+    let ordenado = clientData.sort(function (a, b) {
+        if (a.ordenarPor > b.ordenarPor) {
+            return 1;
         }
-        acc[key].push(obj);
-        return acc;
-    }, {});
+        if (a.ordenarPor < b.ordenarPor) {
+            return -1;
+        }
+        return 0;
+    });
+
+    const vetor = clientData.reduce(ordenar, {});
+    // console.log(vetor);
+    // console.log(Object.values(vetor));
+    let trReCount = Object.values(vetor).length;
+    document.getElementById("tbody").innerHTML = "";
+    for (let i = 0; i < Object.values(vetor).length; i++) {
+
+        let tbodyInfo = document.getElementById('tableDataOrder').getElementsByTagName('tbody');
+        let tr = document.createElement('tr');
+        tr.className = 'trRegister';
+        tr.id = "trOrder" + trReCount;
+        tbodyInfo[0].appendChild(tr);
+
+        console.log(Object.values(vetor)[i].name);
+
+        let td = document.createElement('td');
+        td.setAttribute("colspan", 4);
+        td.className = 'tdRegister';
+        if (objectKey == 'dueDate'){
+            td.innerHTML = Object.values(vetor)[i].name.split('-').reverse().join('/')
+        }
+        else {
+            td.innerHTML = Object.values(vetor)[i].name;
+        }
+        document.getElementById('trOrder' + trReCount).appendChild(td);
+        td = document.createElement('td');
+        td.className = 'tdRegister';
+        td.innerHTML = realBR.format(Object.values(vetor)[i].count);
+        document.getElementById('trOrder' + trReCount).appendChild(td);
+        trReCount++;
+        document.querySelector(".orderedTable").style.visibility = "visible";
+    }
 }
 
-function order(orderBy) {
-    let ordenar = orderBy;
-    let group = agruparPor(clientData, ordenar);
-    console.log(group);
-    console.log(Object.values(group));
-    let trReCount = 0;
-    document.getElementById("tbody").innerHTML = "";
-    for (let i = 0; i < Object.values(group).length; i++) {
-        for (let j = 0; j < Object.values(group)[i].length; j++) {
-            let tbodyInfo = document.getElementById('tableDataOrder').getElementsByTagName('tbody');
-            let tr = document.createElement('tr');
-            tr.className = 'trRegister';
-            tr.id = "trOrder" + trReCount;
-            console.log(tbodyInfo);
-            tbodyInfo[0].appendChild(tr);
 
-            let td = document.createElement('td');
-            td.className = 'tdRegister';
-            td.innerHTML = Object.values(group)[i][j].name;
-            document.getElementById('trOrder' + trReCount).appendChild(td);
-            td = document.createElement('td');
-            td.className = 'tdRegister';
-            td.innerHTML = Object.values(group)[i][j].dueDate.split('-').reverse().join('/');
-            document.getElementById('trOrder' + trReCount).appendChild(td);
-            td = document.createElement('td');
-            td.className = 'tdRegister';
-            td.innerHTML = realBR.format(Object.values(group)[i][j].purchaseAmount.toFixed(2));
-            document.getElementById('trOrder' + trReCount).appendChild(td);
-            td = document.createElement('td');
-            td.className = 'tdRegister';
-            td.id = 'tdFeeOrder' + trReCount;
-            td.innerHTML = realBR.format(Object.values(group)[i][j].fees.toFixed(2));
-            document.getElementById('trOrder' + trReCount).appendChild(td);
-            td = document.createElement('td');
-            td.className = 'tdRegister';
-            td.id = 'tdTotalOrder' + trReCount;
-            td.innerHTML = realBR.format(Object.values(group)[i][j].total.toFixed(2));
-            document.getElementById('trOrder' + trReCount).appendChild(td);
-            trReCount++;
-            document.querySelector(".orderedTable").style.visibility = "visible";
-        }
+function ordenar(acc, cur) {
+    let vetor = cur[objectKey];
+
+    if (!acc[vetor]) {
+        acc[vetor] = { name: vetor, count: 0 };
     }
 
+    acc[vetor].count += cur["total"];
+
+    return acc;
 }
 
