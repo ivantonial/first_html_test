@@ -1,7 +1,7 @@
 module.exports = {
     apps: [
       {
-        script: 'npm start',
+        script: 'backend/server.js',
         cwd: 'backend/',
         name: 'Backend',
         watch: true,
@@ -10,7 +10,7 @@ module.exports = {
         }
       },
       {
-        script: 'npm start',
+        script: 'frontend/index.js',
         cwd: 'frontend/',
         name: 'Frontend',
         watch: true,
