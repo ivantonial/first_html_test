@@ -38,14 +38,15 @@ function newSearch() {
     const option = document.getElementById('selectType').value;
     const inputOption = document.getElementById('searchSpace').value;
 
-    document.getElementById('theadContent').innerHTML = '';
+    
 
     if (option === "extension") {
-        document.getElementById('theadContent').innerHTML += '<th>Nome</th><th>Ramal</th>';
         fetch(`${defaultServerLink}/extension`)
             .then(resposta => resposta.json())
             .then(found => {
                 console.log(found)
+                document.getElementById('theadContent').innerHTML = '';
+                document.getElementById('theadContent').innerHTML += '<th>Nome</th><th>Ramal</th>';
                 document.getElementById('content').innerHTML = '';
                 found.forEach(element => {
                     document.getElementById('content').innerHTML += '<tr><td>' + element.name + '</td><td>' + element.extension + '</td></tr>';
@@ -54,11 +55,12 @@ function newSearch() {
             })
     }
     else {
-        document.getElementById('theadContent').innerHTML += '<th>Id</th><th>Nome</th><th>Ramal</th><th>E-mail</th><th>Setor</th><th>Nascimento</th>';
         fetch(`${defaultServerLink}/${option}/?${option}=${inputOption}`)
             .then(resposta => resposta.json())
             .then(found => {
                 console.log(found)
+                document.getElementById('theadContent').innerHTML = '';
+                document.getElementById('theadContent').innerHTML += '<th>Id</th><th>Nome</th><th>Ramal</th><th>E-mail</th><th>Setor</th><th>Nascimento</th>';
                 document.getElementById('content').innerHTML = '';
                 found.forEach(element => {
                     document.getElementById('content').innerHTML += '<tr><td>' + element.id + '</td><td>' + element.name + '</td><td>' + element.extension + '</td><td>' + element.email + '</td><td>' + element.sector + '</td><td>' + element.birthday.split('-').reverse().join('/'); + '</td></tr>';
@@ -87,20 +89,3 @@ function newRegister() {
 
     
 }
-
-// function newRegister(){
-//     const newName = document.getElementById("inputName").value;
-//     const newExtension = document.getElementById("inputExtension").value;
-//     const newEmail = document.getElementById("inputEmail").value;
-//     const newSector = document.getElementById("inputSector").value;
-//     const newBirthday = document.getElementById("inputBirthday").value;
-//     const init = {
-//         method: 'POST',
-//         headers: {
-//             'Content-Type': 'application/json',
-//             'Accept': 'application/json'
-//         },
-//         body: JSON.stringify({ "name" : newName, "extension" : newExtension,"email" : newEmail,"sector" : newSector, "birthday" : newBirthday })
-//     };
-//     fetch('http://localhost:3000/register', init);
-// }
