@@ -1,7 +1,7 @@
 const fs = require('fs');
 
 function getInfo() {
-    const x = fs.readFileSync('./register.json');
+    const x = fs.readFileSync('./database.json');
     return JSON.parse(x.toString());
 }
 
